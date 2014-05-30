@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bakery</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>Chicago's Cakes and Pies</h1>
+<div class='admin_options'>
+  <%if session[:user]%>
+    <%=link_to 'log out', admin_path(session[:user]), method: :delete%></br>
+    <%=link_to 'admin page', admin_desserts_path(session[:user])%>
+  <%end%>
+</div>
+<div class='container'>
+  <%= yield %>
+</div>
+
+</body>
+</html>

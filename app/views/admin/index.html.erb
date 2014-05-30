@@ -1,0 +1,9 @@
+please log in
+
+<%= form_tag do %>
+  <%= label_tag(:q, "Username:") %>
+  <%= text_field_tag(:username) %></br>
+  <%= label_tag(:q, "Password:") %>
+  <%= text_field_tag(:password) %></br>
+  <%= submit_tag("Log In") %>
+<% end %>
