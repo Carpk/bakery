@@ -13,7 +13,7 @@
  */
 
 .background {
-  background-image:url('countertop.jpg');
+  background-image: url('/assets/countertop.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   /*background-color: ADD A COLOR*/
