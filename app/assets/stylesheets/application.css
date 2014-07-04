@@ -14,11 +14,13 @@
 
 .background {
   background-image:url('countertop.jpg');
+  background-repeat: no-repeat;
   background-size: 100%;
-  /*background: #DDBF7A;*/
+  /*background-color: ADD A COLOR*/
 }
 
 .dessert_list {
+  background-image:url('opaque_box.png');
   margin: 10px;
   float: left;
 }
