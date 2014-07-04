@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+.background {
+  background: #DDBF7A;
+}
+
 .dessert_list {
   margin: 10px;
   float: left;
