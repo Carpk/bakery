@@ -10,7 +10,7 @@
 <h1>Chicago's Cakes and Pies</h1>
 <div class='admin_options'>
   <%if session[:user]%>
-    <%=link_to 'log out', admin_path(session[:user]), method: :delete%></br>
+    <%=link_to 'log out', session_path(session[:user]), method: :delete%></br>
     <%=link_to 'admin page', admin_desserts_path(session[:user])%>
   <%end%>
 </div>

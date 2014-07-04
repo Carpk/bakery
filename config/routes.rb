@@ -7,13 +7,14 @@ Bakery::Application.routes.draw do
   root 'welcome#index'
 
   # Example of regular route:
-    # get 'log_in' => 'admin#index'
+    get 'login' => 'session#index'
+    post 'login' => 'session#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
     get 'dessert/:id' => 'desserts#show', as: :dessert
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    # resources :desserts
+    resources :session
 
   # Example resource route with options:
   #   resources :products do

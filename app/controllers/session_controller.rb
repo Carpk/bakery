@@ -1,15 +1,15 @@
-class AdminController < ApplicationController
+class SessionController < ApplicationController
 
-  # def index
-
-  # end
 
   def create
     user = Admin.find_by(username: params[:username])
-    if user.password == params[:password]
+    if user && user.password == params[:password]
       session[:user] = user.id
       redirect_to admin_desserts_path(user.id)
+    else
+      redirect_to root_path
     end
+    # redirect_to log_in_path
   end
 
   def destroy
