@@ -11,3 +11,14 @@
  *= require_self
  *= require_tree .
  */
+
+.dessert_list {
+  margin: 10px;
+  float: left;
+}
+
+.container {
+  width: 425px;
+  margin-right: auto;
+  margin-left: auto;
+}

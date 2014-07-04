@@ -4,6 +4,10 @@ class DessertsController < ApplicationController
     @new_dessert = Dessert.new
   end
 
+  def show
+    @dessert = Dessert.find(params[:id])
+  end
+
   def create
     puts dessert_params
     new_dessert = Dessert.new(dessert_params)

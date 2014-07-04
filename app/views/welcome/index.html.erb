@@ -2,5 +2,8 @@
 <p>Browes our selection for delivery in the Chicagoland area.</p>
 
 <%@desserts.each do |dessert|%>
-  <div><%=dessert.name%></div>
+  <div class="dessert_list">
+    <%=dessert.name%></br>
+    <%=image_tag dessert.pictures[0].picture_url, size: "120"%>
+  </div>
 <%end%>

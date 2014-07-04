@@ -5,6 +5,7 @@
 
 <table>
   <tr>
+    <th>Pic</th>
     <th>Title</th>
     <th>Text</th>
     <th colspan="2"></th>
@@ -12,8 +13,10 @@
 
 <%@desserts.each do |dessert|%>
   <tr>
+    <td><%=image_tag dessert.pictures[0].picture_url, size: "80"%></td>
     <td><%=dessert.name%></td>
     <td><%=dessert.description%></td>
+    <td><%=link_to 'show', dessert_path(dessert.id)%></td>
     <td><%=link_to 'edit', edit_admin_dessert_path(session[:user], dessert.id)%></td>
     <td><%=link_to 'delete', admin_dessert_path(session[:user], dessert.id), method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>
