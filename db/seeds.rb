@@ -24,7 +24,7 @@ Dessert.create(name: "Banana Muffins",
 
 Picture.create(dessert_id: 1,
                 name: "chocolate cake",
-                picture_url: "http://cimages.proflowers.com/is/image/ProvideCommerce/GFB_13_SCA6AMERBTY_PR1000_W1_SQ.jpg")
+                picture_url: "http://cimages.proflowers.com/is/image/ProvideCommerce/GFB_13_SCA6AMERBTY_PR1000_W1_SQ")
 
 Picture.create(dessert_id: 2,
                 name: "carrot cake",

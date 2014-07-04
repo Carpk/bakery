@@ -13,7 +13,9 @@
  */
 
 .background {
-  background: #DDBF7A;
+  background-image:url('countertop.jpg');
+  background-size: 100%;
+  /*background: #DDBF7A;*/
 }
 
 .dessert_list {
