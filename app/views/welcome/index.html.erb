@@ -4,6 +4,6 @@
 <%@desserts.each do |dessert|%>
   <div class="dessert_list">
     <%=dessert.name%></br>
-    <%=image_tag dessert.pictures[0].picture_url, size: "120"%>
+    <%=image_tag dessert.pictures[0].picture_url, class: 'sample_image', size: "120"%>
   </div>
 <%end%>
