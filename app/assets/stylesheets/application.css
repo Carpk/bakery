@@ -21,7 +21,8 @@
 }
 
 .sample_image {
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dessert_list {
@@ -30,8 +31,8 @@
   width: 150px;
   height: 155px;
   margin: 10px;
-  padding-left: 19px;
-  padding-top: 18px;
+  /*padding-left: 19px;*/
+  /*padding-top: 18px;*/
   float: left;
 }
 
