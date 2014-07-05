@@ -8,9 +8,10 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
+
 
 .background {
   background-image: url('countertop.jpg');
@@ -23,7 +24,7 @@
   background-image:url('opaque_box.png');
   background-repeat: no-repeat;
   width: 150px;
-  height: 155px;
+  height: 175px;
   margin: 10px;
   padding-left: 19px;
   padding-top: 18px;
