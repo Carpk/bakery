@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='background'>
-<h1>Chicago's Cakes and Pies</h1>
+<%= link_to(image_tag("tatianaslogo.png", :width => 240, :height => 144), root_path) %>
 <div class='admin_options'>
   <%if session[:user]%>
     <%=link_to 'log out', session_path(session[:user]), method: :delete%></br>
