@@ -8,12 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
 
+
 .background {
-  background-image:url('<%= asset_path("countertop.jpg") %>');
+  background-image:url('/assets/countertop.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment:  fixed;
@@ -28,7 +29,7 @@
 }
 
 .opaque_background {
-  background-image:url('<%= asset_path("opaque_box_single.png") %> ');
+  background-image:url('/assets/opaque_box_single.png ');
 }
 
 .dessert_feature {
@@ -36,7 +37,7 @@
 }
 
 .dessert_list {
-  /*background-image:url('<%= asset_path("opaque_box_single.png") %> ');*/
+  /*background-image:url('/assets/opaque_box_single.png ');*/
   /*background-repeat: no-repeat;*/
   width: 150px;
   height: 165px;

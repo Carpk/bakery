@@ -3,8 +3,8 @@
 
 <%@desserts.each do |dessert|%>
   <%= link_to dessert_path(dessert.id) do %>
-    <div class="dessert_list">
-      <%=dessert.name%></br>
+    <div class="dessert_list opaque_background">
+      <center><%=dessert.name%></center>
       <%=image_tag dessert.pictures[0].picture_url, class: "sample_image", size: "120"%>
     </div>
   <%end%>

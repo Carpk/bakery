@@ -1,8 +1,9 @@
-<p>This page will show a specific dessert</p>
+<div class='dessert_feature opaque_background'>
 
-<p><%=@dessert.name%></p>
+<b><center><%=@dessert.name%></center></b>
 
-<%=image_tag @dessert.pictures[0].picture_url, size: "260"%>
+<center><%=image_tag @dessert.pictures[0].picture_url, size: "260"%></center>
 
 
 <p><%=@dessert.description%></p>
+</div>
