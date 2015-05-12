@@ -1,10 +1,16 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# Faker gem for seeding fake data
+gem 'faker'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+# Use for managing user accounts
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -40,7 +46,7 @@ group :production, :staging do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
