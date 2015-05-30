@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bakery">
 <head>
   <title>Bakery</title>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="app.js"></script>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class='background'>
@@ -16,7 +16,7 @@
     <%=link_to 'admin page', admin_desserts_path(session[:user])%>
   <%end%>
 </div>
-<div class='container'>
+<div class='container' ng-view>
   <%= yield %>
 </div>
 
