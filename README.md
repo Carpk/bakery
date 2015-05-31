@@ -1,10 +1,10 @@
 ## Tatinana's Bakery
 
-Online store where you will be able to order and purchase pastries. Yum!
+Online store where you will be able to view, select, and order pastries.
 
 ## Requirements
 
-Bakery app uses Ruby 2.2.2, and PostgreSQL.
+Bakery app uses Ruby 2.2.2, Rails 4.0.4, Angular 1.1.5, bootstrap, and PostgreSQL.
 
 ### Getting Started
 
