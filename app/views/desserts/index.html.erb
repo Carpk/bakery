@@ -1,24 +1,27 @@
+<p id="notice"><%= notice %></p>
 
-<p>This is the admin index page, which will display all desserts to manage them.</p>
-<%= link_to 'Create a new dessert', new_admin_dessert_path(session[:user]) %>
-
+<h1>Listing Desserts</h1>
 
 <table>
-  <tr>
-    <th>Pic</th>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<%@desserts.each do |dessert|%>
-  <tr>
-    <td><%=image_tag dessert.pictures[0].picture_url, size: "80"%></td>
-    <td><%=dessert.name%></td>
-    <td><%=dessert.description%></td>
-    <td><%=link_to 'show', dessert_path(dessert.id)%></td>
-    <td><%=link_to 'edit', edit_admin_dessert_path(session[:user], dessert.id)%></td>
-    <td><%=link_to 'delete', admin_dessert_path(session[:user], dessert.id), method: :delete, data: { confirm: 'Are you sure?' }%></td>
-  </tr>
-<% end %>
+  <tbody>
+    <% @desserts.each do |dessert| %>
+      <tr>
+        <td><%= dessert.name %></td>
+        <td><%= link_to 'Show', dessert %></td>
+        <td><%= link_to 'Edit', edit_dessert_path(dessert) %></td>
+        <td><%= link_to 'Destroy', dessert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Dessert', new_dessert_path %>

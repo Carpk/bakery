@@ -1,11 +1,17 @@
 class DessertsController < ApplicationController
 
-  def new
-    @new_dessert = Dessert.new
+  # GET /restaurants
+  # GET /restaurants.json
+  def index
+    @desserts = Dessert.all
   end
 
   def show
     @dessert = Dessert.find(params[:id])
+  end
+
+  def new
+    @dessert = Dessert.new
   end
 
   def create
@@ -27,9 +33,6 @@ class DessertsController < ApplicationController
     @dessert = Dessert.find(params[:id])
   end
 
-  def index
-    @desserts = Dessert.all
-  end
 
   def destroy
     Dessert.find(params[:id]).destroy
