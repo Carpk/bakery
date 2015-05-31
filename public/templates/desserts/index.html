@@ -1,7 +1,10 @@
+<div class='container'>
 
-<a href="/#">index</a>
-<ul ng-repeat="dessert in desserts">
-  <li>
-    <a ng-click="viewDessert(dessert.id)">{{ dessert.name }}</a>
-  </li>
-</ul>
+<div class="row">
+  <div ng-repeat="dessert in desserts">
+    <div class="pull-left listing-box dessert_list opaque_background">
+      <a ng-click="viewDessert(dessert.id)">{{ dessert.name }}</a>
+    </div>
+  </div>
+</div>
+</div>
