@@ -45,7 +45,7 @@ desserts << Dessert.create(name: "Apple Pie",
                            description: " this crispy/ flakey crust and in the crust is moist, kinda mushy apples that usually have cinamin on them and it tastes SOOOOO good. ")
 Picture.create(dessert_id: desserts.last.id,
                name: "apple pie",
-               picture_url: "http://img4-2.myrecipes.timeinc.net/i/recipes/ck/02/05/apple-pie-ck-709820-l.jpg")
+               picture_url: "http://schema.openspring.net/sites/default/files/apple-pie-ck-709820-l_0.jpg")
 
 
 desserts << Dessert.create(name: "Banana Muffins",

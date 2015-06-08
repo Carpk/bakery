@@ -34,8 +34,12 @@
   height: 260px;
 }
 
-.opaque_background {
-  background-image:url('<%= asset_path("opaque_box_single.png") %> ');
+.translucent_background {
+  /*background-image:url('<%= asset_path("translucent_box_single.png") %> ');*/
+  background-color: rgba(200, 173, 123, 0.8);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BDAD8F;
 }
 
 .dessert_feature {
@@ -51,11 +55,25 @@
   float: left;
 }
 
+.dessert_list a{
+  color: #624C3B;
+}
+
+.dessert_list a:hover{
+  color: #3F2E21;
+  text-decoration: none;
+}
+
 .navbar-default{
-  background-color: #C8AD7B;
-  border-color: #B8A27A;
+  background-color: rgba(200, 173, 123, 0.8);
+  border-color: #BDAD8F;
 }
 
 .jumbotron{
   background-color: #C8AD7B;
+}
+
+.navbar-default .navbar-nav li a{
+  /*color: #3F2E21;*/
+  color: #624C3B;
 }
