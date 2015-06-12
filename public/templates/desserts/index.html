@@ -6,8 +6,8 @@
         <option value="age">Newest</option>
       </select>
   <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-10">
+
+    <div class="col-sm-12">
       <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp">
         <div class="pull-left listing-box dessert_list translucent_background">
           <center>
@@ -19,6 +19,6 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-1"></div>
+
   </div>
 </div>
