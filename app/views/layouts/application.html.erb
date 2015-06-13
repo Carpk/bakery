@@ -2,8 +2,8 @@
 <html ng-app="bakery">
 <head>
   <title>Bakery</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="app.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -14,14 +14,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
     <div>
       <ul class="nav navbar-nav">
         <li><a href="#">Home</a></li>
         <li><a href="/#/desserts">Desserts</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/#/about">About</a></li>
+        <li><a href="/#/contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -30,7 +30,9 @@
   <%= yield %>
 </div>
 <footer>
-
+  <div class="container-fluid footer">
+  login
+  </div>
 </footer>
 </body>
 </html>

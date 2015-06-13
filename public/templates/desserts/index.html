@@ -1,17 +1,16 @@
 <div class="container">
-        Search: <input ng-model="query">
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>
+    Search: <input ng-model="query">
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
   <div class="row">
-
     <div class="col-sm-12">
       <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp">
-        <div class="pull-left listing-box dessert_list translucent_background">
+        <div class="pull-left dessert_list translucent_background">
           <center>
-            <a ng-click="viewDessert(dessert.id)" class="nav-link">
+            <a ng-click="viewDessert(dessert.name)" class="nav-link">
               <img class="sample-image" ng-src="{{dessert.pictures[0].picture_url}}">
               {{ dessert.name }}
             </a>

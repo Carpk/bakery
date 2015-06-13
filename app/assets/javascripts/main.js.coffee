@@ -7,9 +7,13 @@
     templateUrl: '../templates/desserts/index.html',
     controller: 'DessertIndexCtrl'
   }).
-  when('/desserts/:id', {
+  when('/desserts/:name', {
     templateUrl: '../templates/desserts/show.html',
     controller: 'DessertShowCtrl'
+  }).
+  when('/about', {
+    templateUrl: '../templates/about.html',
+    controller: 'HomeCtrl'
   }).
   otherwise({
     templateUrl: '../templates/home.html',

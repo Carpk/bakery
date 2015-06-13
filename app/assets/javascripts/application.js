@@ -17,3 +17,19 @@
 //= require main
 
 //= require_tree .
+
+
+$( document ).ready(function() {
+console.log( "ready!" );
+
+
+  $( "div.dessert_list" ).hover(function() {
+    console.log( "mouseIn" );
+  });
+
+
+
+});
+
+
+
