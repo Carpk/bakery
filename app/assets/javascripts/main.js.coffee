@@ -15,6 +15,10 @@
     templateUrl: '../templates/about.html',
     controller: 'HomeCtrl'
   }).
+  when('/contact', {
+    templateUrl: '../templates/contact.html',
+    controller: 'HomeCtrl'
+  }).
   otherwise({
     templateUrl: '../templates/home.html',
     controller: 'HomeCtrl'

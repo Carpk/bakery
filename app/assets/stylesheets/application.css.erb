@@ -60,7 +60,6 @@
 .dessert_list a:hover{
   color: #3F2E21;
   text-decoration: none;
-
 }
 
 .dessert_list:hover{
@@ -68,20 +67,34 @@
   background-color: rgba(200, 173, 123, 0.6);
 }
 
-.landing-page-img{
-  background-image:url('<%= asset_path("landing-page.png") %>');
+.img-container{
+  background-image:url('<%= asset_path("landing-page.png") %> ');
   background-repeat: no-repeat;
+  background-size: 100%;
+  height: 65vw;
+  padding-top: 8em;
+}
+
+.img-text{
+  text-shadow: 0px 0px 3px #CBA067;
+  color: black;
+  /*position: absolute;*/
+  /*margin-top: 8em;*/
+  /*width: 100%;*/
+}
+
+.landing-page-img{
   width: 100%;
-  height: 100%;
 }
 
 .navbar-default{
   background-color: rgba(200, 173, 123, 0.4);
   border-color: rgba(189, 173, 143, 0);
+  border-radius: 0;
 }
 
 .jumbotron{
-  background-color: #C8AD7B;
+  background-color: rgba(200, 173, 123, 0.8);
 }
 
 .navbar-default .navbar-nav li a{
@@ -89,10 +102,26 @@
   color: #624C3B;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 8em;
+}
+
 footer {
-  /*position: absolute;*/
-  /*bottom: 0;*/
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 12px;
   margin-top: 10em;
   background-color: rgba(200, 173, 123, 0.4);
+}
+
+#map-canvas {
+  width: 25vw;
+  height: 25vw;
+  background-color: grey;
 }
