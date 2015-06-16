@@ -1,5 +1,5 @@
 
-@bakery = angular.module('bakery', [])
+@bakery = angular.module('bakery', ['ngMap'])
 
 @bakery.config(['$routeProvider', ($routeProvider) ->
   $routeProvider.
