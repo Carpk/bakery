@@ -27612,7 +27612,7 @@ var styleDirective = valueFn({
 })(window, document);
 angular.element(document).find('head').append('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\\:form{display:block;}</style>');
 (function() {
-  this.bakery = angular.module('bakery', []);
+  this.bakery = angular.module('bakery', ['ngMap']);
 
   this.bakery.config([
     '$routeProvider', function($routeProvider) {
