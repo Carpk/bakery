@@ -1,4 +1,5 @@
 Bakery::Application.routes.draw do
+  devise_for :admins
   get "static_pages/index"
   # get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,8 +9,8 @@ Bakery::Application.routes.draw do
   root 'static_pages#index'
 
   # Example of regular route:
-    get 'login' => 'session#index'
-    post 'login' => 'session#create'
+    # get 'login' => 'session#index'
+    # post 'login' => 'session#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
     # get 'dessert/:id' => 'desserts#show', as: :dessert
@@ -30,10 +31,10 @@ Bakery::Application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-    resources :admin do
-      resources :desserts
-      # resource :seller
-    end
+    # resources :admin do
+    #   resources :desserts
+    #   # resource :seller
+    # end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
