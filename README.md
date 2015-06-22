@@ -1,10 +1,10 @@
 ## Tatinana's Bakery
 
-Online store where you will be able to view, select, and order pastries.
+Online store where you will be able to view, select, and order pastries. [tatianasbakery.herokuapp.com](tatianasbakery.herokuapp.com)
 
 ## Requirements
 
-Bakery app uses Ruby 2.2.2, Rails 4.0.4, Angular 1.1.5, bootstrap, and PostgreSQL.
+Bakery app uses Ruby 2.2.2, Rails 4.0.4, Angular 1.3.5, Devise, Bootstrap, and PostgreSQL.
 
 ### Getting Started
 
