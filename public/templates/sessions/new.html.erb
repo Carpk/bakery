@@ -1,36 +1,12 @@
 <div class='container'>
   <h2>Log in</h2>
 
-  resource, as: resource_name, url: session_path(resource_name)
-    <div class="field">
-      email<br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-
-    <div class="field">
-      password <br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <% if devise_mapping.rememberable? -%>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-    <% end -%>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+  resource, as: resource_name, url: session_path(resource_name)<br>
 
   <div ng-controller="ExampleController">
     <form novalidate class="simple-form">
-      Name: <input type="text" ng-model="user.name" /><br />
-      E-mail: <input type="email" ng-model="user.email" /><br />
-
+      E-mail: <input type="email" ng-model="admin.email" /><br />
+      Password: <input type="password" ng-model="admin.password" /><br />
       <input type="button" ng-click="reset()" value="Reset" />
       <input type="submit" ng-click="update(user)" value="Log In" />
     </form>

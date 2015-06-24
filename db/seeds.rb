@@ -27,6 +27,9 @@ desserts << Dessert.create(name: "Chocolate Cake",
 Picture.create(dessert_id: desserts.last.id,
                 name: "chocolate cake",
                 picture_url: "http://cimages.proflowers.com/is/image/ProvideCommerce/GFB_13_SCA6AMERBTY_PR1000_W1_SQ")
+Picture.create(dessert_id: desserts.last.id,
+                name: "cake slice",
+                picture_url: "http://purplefoodie.com/chocolate-chocolate-cake.jpg")
 
 
 desserts << Dessert.create(name: "Carrot Cake",
@@ -35,8 +38,11 @@ desserts << Dessert.create(name: "Carrot Cake",
                            price: rand(7..18),
                            description: "Carrot cake is a sweet and moist spice cake, full of cut carrots and toasted nuts, and covered in cream cheese icing.")
 Picture.create(dessert_id: desserts.last.id,
-               name: "carrot cake",
+               name: "carrot cake slice",
                picture_url: "http://rossumiati.com/wp-content/uploads/2014/06/Carrot-Cake.jpg")
+Picture.create(dessert_id: desserts.last.id,
+               name: "carrot cake",
+               picture_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQmDtoDl5hcPh_r3QsDz1KK8uMFcV8UQSPAk15D0TrwBZbS86sX")
 
 desserts << Dessert.create(name: "Apple Pie",
                            category: "pies",
@@ -46,6 +52,9 @@ desserts << Dessert.create(name: "Apple Pie",
 Picture.create(dessert_id: desserts.last.id,
                name: "apple pie",
                picture_url: "http://schema.openspring.net/sites/default/files/apple-pie-ck-709820-l_0.jpg")
+Picture.create(dessert_id: desserts.last.id,
+               name: "apple pie",
+               picture_url: "http://s3.amazonaws.com/gmi-digital-library/3cf7cb34-8f77-4885-bfec-697f96dd5d61.jpg")
 
 
 desserts << Dessert.create(name: "Banana Muffins",
