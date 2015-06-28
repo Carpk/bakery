@@ -15,6 +15,7 @@ def ingred_list
 end
 
 Admin.create(username: "admin",
+             email: Faker::Internet.email,
              password: "password")
 
 desserts = []

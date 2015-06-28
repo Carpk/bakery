@@ -9,8 +9,11 @@ gem 'faker'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use for managing user accounts
+# For user authentication
 gem 'devise'
+
+#
+gem 'angular_rails_csrf'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -35,9 +38,6 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
-# For user authentication
-gem 'devise'
 
 source "https://rails-assets.org" do
   gem "rails-assets-angular-devise"

@@ -1,17 +1,12 @@
 <div class='container'>
   <h2>Log in</h2>
-
-  resource, as: resource_name, url: session_path(resource_name)<br>
-
-  <div ng-controller="ExampleController">
-    <form novalidate class="simple-form">
-      E-mail: <input type="email" ng-model="admin.email" /><br />
-      Password: <input type="password" ng-model="admin.password" /><br />
-      <input type="button" ng-click="reset()" value="Reset" />
-      <input type="submit" ng-click="update(user)" value="Log In" />
+  <div class="simple-form">
+    <form ng-controller="SessionNewCtrl as admin" ng-submit="admin.signIn(admin)" novalidate>
+      <label for="inputUsername">Username:</label><br>
+      <input type="text" id="inputUsername" ng-model="admin.credentials.username" /><br />
+      <label for="inputPassword">Password:</label><br>
+      <input type="password" id="inputPassword" ng-model="admin.credentials.password" /><br />
+      <input type="submit" class="btn btn-default" value="Log In" />
     </form>
   </div>
-
 </div>
-
-
