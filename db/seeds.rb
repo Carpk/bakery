@@ -31,7 +31,9 @@ Picture.create(dessert_id: desserts.last.id,
 Picture.create(dessert_id: desserts.last.id,
                 name: "cake slice",
                 picture_url: "http://purplefoodie.com/chocolate-chocolate-cake.jpg")
-
+Picture.create(dessert_id: desserts.last.id,
+                name: "cake slice",
+                picture_url: "http://www.onislam.net/english/oimedia/onislamen/images/mainimages/13-12-14_Make-Drake-Chocolate-Cake-in-5-Steps.jpg")
 
 desserts << Dessert.create(name: "Carrot Cake",
                            category: "cakes",
@@ -66,6 +68,9 @@ desserts << Dessert.create(name: "Banana Muffins",
 Picture.create(dessert_id: desserts.last.id,
                name: "banana muffins",
                picture_url: "http://pinchmysalt.files.wordpress.com/2007/05/best-banana-muffin.jpg")
+Picture.create(dessert_id: desserts.last.id,
+               name: "banana muffins",
+               picture_url: "http://cdn1.recipecorner.com/sites/recipecorner.com/files/whole_grain_muffins.JPG")
 
 
 desserts << Dessert.create(name: "Angel Food Cake",
@@ -76,6 +81,9 @@ desserts << Dessert.create(name: "Angel Food Cake",
 Picture.create(dessert_id: desserts.last.id,
                name: "angel food cake",
                picture_url: "http://images.media-allrecipes.com/userphotos/250x250/00/45/71/457170.jpg")
+Picture.create(dessert_id: desserts.last.id,
+               name: "angel food slice with strawberries",
+               picture_url: "http://www.finecooking.com/cms/uploadedimages/images/cooking/articles/issues_91-100/051092045-01-angel-food-cake_xlg.jpg")
 
 
 desserts << Dessert.create(name: "Tres Leches",
