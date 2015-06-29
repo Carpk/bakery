@@ -38,5 +38,5 @@
 .config(['AuthProvider', (AuthProvider) ->
   # Configure Auth service with AuthProvider
   AuthProvider.loginPath('sign_in.json');
-  AuthProvider.resourceName('admins');
+  AuthProvider.resourceName('admin');
 ])

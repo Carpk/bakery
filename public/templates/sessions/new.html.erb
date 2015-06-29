@@ -2,8 +2,8 @@
   <h2>Log in</h2>
   <div class="simple-form">
     <form ng-controller="SessionNewCtrl as admin" ng-submit="admin.signIn(admin)" novalidate>
-      <label for="inputUsername">Username:</label><br>
-      <input type="text" id="inputUsername" ng-model="admin.credentials.username" /><br />
+      <label for="inputEmail">Email:</label><br>
+      <input type="text" id="inputEmail" ng-model="admin.credentials.email" /><br />
       <label for="inputPassword">Password:</label><br>
       <input type="password" id="inputPassword" ng-model="admin.credentials.password" /><br />
       <input type="submit" class="btn btn-default" value="Log In" />
