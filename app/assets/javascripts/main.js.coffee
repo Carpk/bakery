@@ -21,7 +21,11 @@
     controller: 'HomeCtrl'
   }).
   when('/sign_in', {
-    templateUrl: '../templates/sessions/new.html.erb'
+    templateUrl: '../templates/sessions/new.html'
+  }).
+  when('/admin_console', {
+    templateUrl: '../templates/sessions/console.html',
+    controller: 'SessionCtrl'
   }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',
@@ -36,7 +40,10 @@
     $httpProvider.defaults.withCredentials = true;
 ])
 .config(['AuthProvider', (AuthProvider) ->
-  # Configure Auth service with AuthProvider
   AuthProvider.loginPath('sign_in.json');
+
+  AuthProvider.logoutMethod('POST');
+  AuthProvider.logoutPath('sign_out.json');
+
   AuthProvider.resourceName('admin');
 ])
