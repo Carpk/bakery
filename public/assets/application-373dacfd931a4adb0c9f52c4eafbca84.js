@@ -27665,7 +27665,10 @@ angular.element(document).find('head').append('<style type="text/css">@charset "
         templateUrl: '../templates/contact.html',
         controller: 'HomeCtrl'
       }).when('/sign_in', {
-        templateUrl: '../templates/sessions/new.html.erb'
+        templateUrl: '../templates/sessions/new.html'
+      }).when('/admin_console', {
+        templateUrl: '../templates/sessions/console.html',
+        controller: 'SessionCtrl'
       }).when('/sign_up', {
         templateUrl: 'sign_up.html',
         controller: 'HomeCtrl'
@@ -27681,7 +27684,8 @@ angular.element(document).find('head').append('<style type="text/css">@charset "
   ]).config([
     'AuthProvider', function(AuthProvider) {
       AuthProvider.loginPath('sign_in.json');
-      return AuthProvider.resourceName('admins');
+      AuthProvider.logoutPath('admins/sign_out.json');
+      return AuthProvider.resourceName('admin');
     }
   ]);
 
@@ -29923,20 +29927,26 @@ window.jstestdriver && (function(window) {
 
 }).call(this);
 (function() {
-  this.bakery.controller('SessionNewCtrl', [
+  this.bakery.controller('SessionCtrl', [
     'Auth', '$scope', '$location', function(Auth, $scope, $location) {
       this.credentials = {
-        username: '',
+        email: '',
         password: ''
       };
-      return this.signIn = function(signIn) {
-        console.log(this);
+      this.logOut = function() {
+        return Auth.logout().then(function(oldUser) {
+          console.info("Succesfully logged out!");
+          return $location.path("/");
+        }, function(error) {
+          return console.warn("An error occured while logging out");
+        });
+      };
+      return this.signIn = function() {
         return Auth.login(this.credentials).then(function(admin) {
-          $location.path("/");
-          alert('Successfully signed in!');
-          (function(error) {});
-          console.info('Error in authenticating user');
-          return alert('Error signing in admin');
+          $location.path("/admin_console");
+          return console.info('Success in authenticating user');
+        }, function(error) {
+          return console.info('Error in authenticating user');
         });
       };
     }
