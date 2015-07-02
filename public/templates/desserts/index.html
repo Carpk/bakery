@@ -7,7 +7,7 @@
     </select>
   <div class="row">
     <div class="col-sm-12">
-      <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp">
+      <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
         <div class="pull-left dessert_list translucent_background">
           <center>
             <a ng-click="viewDessert(dessert.name)" class="nav-link">

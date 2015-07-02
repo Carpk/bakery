@@ -42,8 +42,8 @@
 .config(['AuthProvider', (AuthProvider) ->
   AuthProvider.loginPath('sign_in.json');
 
-  AuthProvider.logoutMethod('POST');
-  AuthProvider.logoutPath('sign_out.json');
+
+  AuthProvider.logoutPath('admins/sign_out.json');
 
   AuthProvider.resourceName('admin');
 ])

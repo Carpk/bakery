@@ -1,12 +1,18 @@
 <div class='container'>
-  <h2>Log in</h2>
-  <div class="simple-form">
-    <form ng-controller="SessionCtrl as admin" ng-submit="admin.signIn(admin)" novalidate>
-      <label for="inputEmail">Email:</label><br>
-      <input type="text" id="inputEmail" ng-model="admin.credentials.email" /><br />
-      <label for="inputPassword">Password:</label><br>
-      <input type="password" id="inputPassword" ng-model="admin.credentials.password" /><br />
-      <input type="submit" class="btn btn-default" value="Log In" />
-    </form>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h2>Log in</h2>
+      <div class="simple-form">
+        <form ng-controller="SessionCtrl as admin" ng-submit="admin.signIn(admin)" novalidate>
+          <label for="inputEmail">Email:</label><br>
+          <input type="text" id="inputEmail" ng-model="admin.credentials.email" /><br />
+          <label for="inputPassword">Password:</label><br>
+          <input type="password" id="inputPassword" ng-model="admin.credentials.password" /><br />
+          <input type="submit" class="btn btn-default" value="Log In" />
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-4"></div>
   </div>
 </div>
