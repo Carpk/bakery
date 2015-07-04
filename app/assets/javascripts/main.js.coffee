@@ -1,6 +1,6 @@
 
 @bakery = angular.module('bakery', [
-  'ngMap', 'Devise'
+  'ngMap', 'Devise', 'ngRoute'
 ])
 .config(['$routeProvider', ($routeProvider) ->
   $routeProvider.
@@ -20,12 +20,11 @@
     templateUrl: '../templates/contact.html',
     controller: 'HomeCtrl'
   }).
-  when('/sign_in', {
+  when('/admins/sign_in', {
     templateUrl: '../templates/sessions/new.html'
   }).
   when('/admin_console', {
-    templateUrl: '../templates/sessions/console.html',
-    controller: 'SessionCtrl'
+    templateUrl: '../templates/sessions/console.html'
   }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',

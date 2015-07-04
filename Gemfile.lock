@@ -89,7 +89,7 @@ GEM
       sprockets-rails (~> 2.0.0)
     rails-assets-angular (1.4.1)
     rails-assets-angular-devise (1.1.0)
-      rails-assets-angular (>= 1.2.0, < 2)
+      rails-assets-angular (>= 1.2.0, < 3)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
