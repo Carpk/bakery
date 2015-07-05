@@ -18,6 +18,7 @@
 //= require angular-route
 //= require angular-devise
 
+
 //= require main
 
 

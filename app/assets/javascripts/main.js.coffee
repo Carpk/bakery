@@ -1,6 +1,6 @@
 
 @bakery = angular.module('bakery', [
-  'ngMap', 'Devise', 'ngRoute'
+  'ngMap', 'Devise', 'ngRoute', 'ngSanitize', 'ngS3upload'
 ])
 .config(['$routeProvider', ($routeProvider) ->
   $routeProvider.
@@ -45,4 +45,7 @@
   AuthProvider.logoutPath('admins/sign_out.json');
 
   AuthProvider.resourceName('admin');
+])
+.config(['ngS3Config', (ngS3Config) ->
+  ngS3Config.theme = 'bootstrap2'
 ])

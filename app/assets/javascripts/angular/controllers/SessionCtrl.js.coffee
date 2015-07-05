@@ -1,5 +1,5 @@
 @bakery.controller 'SessionCtrl', ['Auth', '$scope', '$location', (Auth, $scope, $location) ->
-  admin_credentials  = {email: '', password: ''}
+  admin_credentials  = { email: '', password: ''}
   console.log("Session controller has been loaded")
 
   $scope.logOut = () ->

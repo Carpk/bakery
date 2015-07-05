@@ -1,11 +1,11 @@
-class S3Provider
+class S3provider
 
   def s3_access_token
-    render json: {
+    {
       policy:    s3_upload_policy,
       signature: s3_upload_signature,
-      key:       GLOBAL[:aws_key]
-    }
+      key:       ENV["AWS_KEY"]
+    }.to_json
   end
 
   protected
@@ -19,7 +19,7 @@ class S3Provider
       {
         "expiration" => 1.hour.from_now.utc.xmlschema,
         "conditions" => [
-          { "bucket" =>  GLOBAL[:aws_bucket] },
+          { "bucket" =>  ENV["AWS_BUCKET"] },
           [ "starts-with", "$key", "" ],
           { "acl" => "public-read" },
           [ "starts-with", "$Content-Type", "" ],
@@ -29,7 +29,7 @@ class S3Provider
   end
 
   def s3_upload_signature
-    Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new('sha1'), GLOBAL[:aws_secret], s3_upload_policy)).gsub("\n","")
+    Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new('sha1'), ENV["AWS_SECRET"], s3_upload_policy)).gsub("\n","")
   end
 
 end
