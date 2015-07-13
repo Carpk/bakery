@@ -4,7 +4,7 @@ Online store where you will be able to view, select, and order pastries. [tatian
 
 ## Requirements
 
-Bakery app uses Ruby 2.2.2, Rails 4.0.4, Angular 1.1.5, Devise, Bootstrap, and PostgreSQL.
+Bakery app uses Ruby 2.2.2, Rails 4.0.4, Angular 1.2.28, Devise, ngMap, ngSanitize, ngS3upload, ngImgCrop, Bootstrap, and PostgreSQL.
 
 ### Getting Started
 

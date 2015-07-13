@@ -6,10 +6,35 @@
     </ul>
     <div class="col-sm-10" ng-controller="AdminCtrl">
       <h1>Admin's Console</h1>
-      create a new item<br>
-      select an existing item<br>
-      <div s3-upload bucket="'tatianasbakery'" ng-model="files.first"
-   s3-upload-options="{getOptionsUri: './desserts/new.json', folder: 'images/'}">
+
+      <div>
+        <input type="file" id="fileInput" />
+      </div>
+      <div class="cropArea">
+        <img-crop image="myImage" result-image="myCroppedImage" area-type="square"></img-crop>
+      </div>
+      <div>Cropped Image:</div>
+      <div><img ng-src="{{myCroppedImage}}" /></div>
+
+
+
+        Picture: <input type="file" accept="image/*" ngf-select="" ng-model="picFile" name="file">
+        <br>
+
+      <button ng-model="myCroppedImages" ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Upload</button>
+        <button ng-click="testObj(myCroppedImage)">testObj</button>
+        <img ng-show="picFile[0] != null" ngf-src="picFile[0]" class="thumb" src="">
+        <span class="progress ng-hide" ng-show="picFile[0].progress >= 0">
+          <div style="width:%" ng-bind="picFile[0].progress + '%'" class="ng-binding">%</div>
+        </span>
+        <span ng-show="picFile[0].result" class="ng-hide">Upload Successful</span>
+
+      <br>
+
+
+
+
+      </div>
     </div>
   </div>
 </div>

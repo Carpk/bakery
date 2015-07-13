@@ -5,7 +5,7 @@ class S3provider
       policy:    s3_upload_policy,
       signature: s3_upload_signature,
       key:       ENV["AWS_KEY"]
-    }.to_json
+    }
   end
 
   protected
@@ -21,6 +21,7 @@ class S3provider
         "conditions" => [
           { "bucket" =>  ENV["AWS_BUCKET"] },
           [ "starts-with", "$key", "" ],
+          [ "starts-with", "$filename", "" ],
           { "acl" => "public-read" },
           [ "starts-with", "$Content-Type", "" ],
           [ "content-length-range", 0, 10 * 1024 * 1024 ]
