@@ -24,6 +24,7 @@
   # )
 
   uploadS3 = (file) ->
+    console.log file
     $http.get('./desserts/new.json').success((data) ->
       Upload.upload({
         url: 'https://tatianasbakery.s3.amazonaws.com/', ## S3 upload url including bucket name
@@ -41,7 +42,7 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log(success)
+      console.log("success!")
     )
 
   createBlob = (file) ->
@@ -50,20 +51,39 @@
       reader.result
     reader.readAsDataURL(file)
 
+  dataURItoBlob = (dataURI) ->
+    binary = atob(dataURI.split(',')[1])
+    mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+    array = []
+    for i in [0...binary.length]
+      array.push binary.charCodeAt i
+    new Blob([new Uint8Array(array)], {type:mimeString})
 
-  $scope.testObj = (file) ->
-    blob = createBlob(file)
+
+
+  readBlob = (blob) ->
+    reader = new FileReader
+    reader.readAsDa
+
+
+  $scope.testCropObj = (dataURI) ->
+    blob = dataURItoBlob dataURI
+    # blob.name = 'smiley'
+    # data = readBlob blob
     console.log(blob)
 
+  $scope.testPicObj = (file) ->
+    console.log(file[0])
 
-  $scope.upload = (file) ->
+  $scope.upload = (dataURI) ->
     $scope.errorMsg = null
-    uploadS3 file
+    blob = dataURItoBlob dataURI
+    blob.name = 'smiley' # create random string?
+    uploadS3 blob
 
 
   $scope.uploadPic = (files) ->
-    $scope.formUpload = true
-    $scope.upload files[0] if files isnt null
+    $scope.upload files if files isnt null
 
 
 ]

@@ -16,13 +16,14 @@
       <div>Cropped Image:</div>
       <div><img ng-src="{{myCroppedImage}}" /></div>
 
+        Picture:
+        <input type="file" accept="image/*" ngf-select="" ng-model="picFile" name="file"><br>
 
+        <button ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Upload</button><br>
 
-        Picture: <input type="file" accept="image/*" ngf-select="" ng-model="picFile" name="file">
-        <br>
+        <button ngf-accept="'image/*'" ng-click="testCropObj(myCroppedImage)">testCroppedObj</button><br>
+        <button ngf-accept="'image/*'" ng-click="testPicObj(picFile)">testPicObj</button><br>
 
-      <button ng-model="myCroppedImages" ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Upload</button>
-        <button ng-click="testObj(myCroppedImage)">testObj</button>
         <img ng-show="picFile[0] != null" ngf-src="picFile[0]" class="thumb" src="">
         <span class="progress ng-hide" ng-show="picFile[0].progress >= 0">
           <div style="width:%" ng-bind="picFile[0].progress + '%'" class="ng-binding">%</div>
