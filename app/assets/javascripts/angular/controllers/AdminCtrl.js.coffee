@@ -24,25 +24,24 @@
   # )
 
   uploadS3 = (file) ->
-    console.log file
     $http.get('./desserts/new.json').success((data) ->
       Upload.upload({
-        url: 'https://tatianasbakery.s3.amazonaws.com/', ## S3 upload url including bucket name
+        url: 'https://tatianasbakery.s3.amazonaws.com/',
         method: 'POST',
         fields: {
-          key: file.name, ##file.name, ## the key to store the file on S3, could be file name or customized
+          key: file.name,
           AWSAccessKeyId: 'AKIAJCD6BQBFJEQSXBNQ',
-          acl: 'public-read', ## sets the access to the uploaded file in the bucket: private or public
-          'Content-Type': 'image/jpeg', ## content type of the file (NotEmpty)
-          filename: file.name, ## this is needed for Flash polyfill IE8-9
-          policy: data.policy, ## base64-encoded json policy (see article below)
-          signature: data.signature ## base64-encoded signature based on policy string (see article below)
+          acl: 'public-read',
+          'Content-Type': 'image/jpeg',
+          filename: file.name,
+          policy: data.policy,
+          signature: data.signature
         },
         withCredentials: false,
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log("success!")
+      console.log(config)
     )
 
   createBlob = (file) ->
@@ -68,7 +67,7 @@
 
   $scope.testCropObj = (dataURI) ->
     blob = dataURItoBlob dataURI
-    # blob.name = 'smiley'
+    blob.name = Math.floor((Math.random() * 100000) + 1)
     # data = readBlob blob
     console.log(blob)
 
@@ -78,7 +77,7 @@
   $scope.upload = (dataURI) ->
     $scope.errorMsg = null
     blob = dataURItoBlob dataURI
-    blob.name = 'smiley' # create random string?
+    blob.name = Math.floor((Math.random() * 100000) + 1)
     uploadS3 blob
 
 
