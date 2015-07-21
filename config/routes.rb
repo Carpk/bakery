@@ -31,10 +31,9 @@ Bakery::Application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-    # resources :admin do
-    #   resources :desserts
-    #   # resource :seller
-    # end
+    resources :admins do
+      resources :desserts
+    end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do

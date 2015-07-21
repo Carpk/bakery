@@ -1,3 +1,3 @@
 @bakery.controller 'HomeCtrl', ['$scope', ($scope) ->
-  $scope.foo = 'bar'
+  $scope.specialDeal = 'Cake!'
 ]

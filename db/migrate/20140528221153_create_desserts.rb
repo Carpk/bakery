@@ -4,7 +4,8 @@ class CreateDesserts < ActiveRecord::Migration
       t.string  :name
       t.string  :category
       t.text    :description
-      t.text 	:ingredients
+      t.text 	  :ingredients
+      t.integer :views
       t.integer :price
 
       t.timestamps

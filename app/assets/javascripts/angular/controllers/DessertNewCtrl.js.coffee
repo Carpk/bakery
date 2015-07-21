@@ -1,11 +1,8 @@
-@bakery.controller 'AdminCtrl', ['$scope', '$http', '$timeout', '$compile', 'Upload', ($scope, $http, $timeout, $compile, Upload) ->
-  $scope.myFiles = ''
 
+@bakery.controller 'DessertNewCtrl', ['$scope', '$http', '$timeout', '$compile', 'Upload', ($scope, $http, $timeout, $compile, Upload) ->
   $scope.myImage = ''
   $scope.myCroppedImage = ''
   $scope.type = 'square'
-
-  tokens = {}
 
 
   handleFileSelect = (evt) ->
@@ -17,11 +14,6 @@
       )
     reader.readAsDataURL(file)
   angular.element(document.querySelector('#fileInput')).on('change', handleFileSelect)
-
-
-  # $scope.$watch('files', () ->
-  #     $scope.upload($scope.files)
-  # )
 
   uploadS3 = (file) ->
     $http.get('./desserts/new.json').success((data) ->
@@ -58,21 +50,17 @@
       array.push binary.charCodeAt i
     new Blob([new Uint8Array(array)], {type:mimeString})
 
+  # readBlob = (blob) ->
+  #   reader = new FileReader
+  #   reader.readAsDa
 
+  # $scope.testCropObj = (dataURI) ->
+  #   blob = dataURItoBlob dataURI
+  #   blob.name = Math.floor((Math.random() * 100000) + 1)
+  #   console.log(blob)
 
-  readBlob = (blob) ->
-    reader = new FileReader
-    reader.readAsDa
-
-
-  $scope.testCropObj = (dataURI) ->
-    blob = dataURItoBlob dataURI
-    blob.name = Math.floor((Math.random() * 100000) + 1)
-    # data = readBlob blob
-    console.log(blob)
-
-  $scope.testPicObj = (file) ->
-    console.log(file[0])
+  # $scope.testPicObj = (file) ->
+  #   console.log(file[0])
 
   $scope.upload = (dataURI) ->
     $scope.errorMsg = null
@@ -80,9 +68,7 @@
     blob.name = Math.floor((Math.random() * 100000) + 1)
     uploadS3 blob
 
-
   $scope.uploadPic = (files) ->
     $scope.upload files if files isnt null
-
 
 ]

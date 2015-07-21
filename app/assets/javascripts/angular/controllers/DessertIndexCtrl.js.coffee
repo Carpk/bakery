@@ -1,4 +1,3 @@
-
 @bakery.controller 'DessertIndexCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
   $scope.desserts = []
   $http.get('./desserts.json').success((data) ->

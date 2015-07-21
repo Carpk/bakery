@@ -3,39 +3,25 @@
     <ul class="col-sm-2" ng-controller="SessionCtrl">
       <li role="presentation"><a href ="" ng-click="logOut()">Logout</a></li>
       <li><a href="">Edit Items</a></li>
+      <li><a href="#/desserts/new">Create Item</a></li>
     </ul>
-    <div class="col-sm-10" ng-controller="AdminCtrl">
-      <h1>Admin's Console</h1>
+    <div class="col-sm-10">
+      <h1>Admin Console</h1>
 
-      <div class="cropBox">
-        <div>
-          <input type="file" id="fileInput" />
+      <ul class="list-group">
+        <div ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
+          <li class="list-group-item">
+            <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
+            <a ng-click="viewDessert(dessert.name)" class="nav-link">{{ dessert.name }}</a>
+            <a ng-click="viewDessert(dessert.name)" class="nav-link">view</a>
+            <a ng-click="editDessert(dessert.name)" class="nav-link">edit</a>
+            <a ng-click="deleteDessert(dessert.name)" class="nav-link">delete</a>
+          </li>
         </div>
-        <div class="cropArea">
-          <img-crop image="myImage" result-image="myCroppedImage" area-type="square"></img-crop>
-        </div>
-        <div>
-          Cropped Image:
-        </div>
-        <div>
-          <img ng-src="{{myCroppedImage}}" />
-        </div>
-      </div>
-
-      <button ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Upload</button><br>
-
-      <button ngf-accept="'image/*'" ng-click="testCropObj(myCroppedImage)">testObj</button><br>
-
-      <img ng-show="picFile[0] != null" ngf-src="picFile[0]" class="thumb" src="">
-      <span class="progress ng-hide" ng-show="picFile[0].progress >= 0">
-        <div style="width:%" ng-bind="picFile[0].progress + '%'" class="ng-binding">%</div>
-      </span>
-      <span ng-show="picFile[0].result" class="ng-hide">Upload Successful</span>
+      </ul>
 
 
 
-
-      </div>
     </div>
   </div>
 </div>

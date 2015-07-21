@@ -23,6 +23,7 @@ desserts = []
 desserts << Dessert.create(name: "Chocolate Cake",
                            category: "cakes",
                            ingredients: ingred_list,
+                           views: rand(1..7),
                            price: rand(7..18),
                            description: "Cake, with chocolate")
 Picture.create(dessert_id: desserts.last.id,

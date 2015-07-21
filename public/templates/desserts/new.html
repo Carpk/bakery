@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <ul class="col-sm-2" ng-controller="SessionCtrl">
+      <li role="presentation"><a href ="" ng-click="logOut()">Logout</a></li>
+      <li><a href="">Edit Items</a></li>
+    </ul>
+    <div class="col-sm-10" ng-controller="AdminCtrl">
+      <h1>Create New Item:</h1>
+
+      <div class="cropBox">
+        <div>
+          <input type="file" id="fileInput" />
+        </div>
+        <div class="cropArea">
+          <img-crop image="myImage" result-image="myCroppedImage" area-type="square"></img-crop>
+        </div>
+        <div>
+          Cropped Image:
+        </div>
+        <div>
+          <img ng-src="{{myCroppedImage}}" />
+        </div>
+      </div>
+
+      <button ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Upload</button><br>
+
+      <button ngf-accept="'image/*'" ng-click="testCropObj(myCroppedImage)">testObj</button><br>
+
+      <img ng-show="picFile[0] != null" ngf-src="picFile[0]" class="thumb" src="">
+      <span class="progress ng-hide" ng-show="picFile[0].progress >= 0">
+        <div style="width:%" ng-bind="picFile[0].progress + '%'" class="ng-binding">%</div>
+      </span>
+      <span ng-show="picFile[0].result" class="ng-hide">Upload Successful</span>
+      </div>
+      <form ng-submit="createItem()">
+        Item Name:<br>
+        <input type="text" name="Name"><br>
+        Category:<br>
+        <input type="text" name="Name"><br>
+        Description:<br>
+        <input type="text" name="Name"><br>
+        Ingredients:<br>
+        <input type="text" name="Name"><br>
+        Price:<br>
+        <input type="text" name="Name"><br>
+        <input type="submit" value="Create"/>
+      </form>
+    </div>
+  </div>
+</div>

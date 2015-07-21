@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150618003134) do
     t.string   "category"
     t.text     "description"
     t.text     "ingredients"
+    t.integer  "views"
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
