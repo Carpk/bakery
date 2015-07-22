@@ -12,10 +12,14 @@
         <div ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
           <li class="list-group-item">
             <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
-            <a ng-click="viewDessert(dessert.name)" class="nav-link">{{ dessert.name }}</a>
-            <a ng-click="viewDessert(dessert.name)" class="nav-link">view</a>
-            <a ng-click="editDessert(dessert.name)" class="nav-link">edit</a>
-            <a ng-click="deleteDessert(dessert.name)" class="nav-link">delete</a>
+            {{ dessert.name }}
+            Views: {{ dessert.views }}
+            Views per day: {{ dessert.views_per_day }}
+            <span class='pull-right'>
+              <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
+              <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
+              <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
+            </span>
           </li>
         </div>
       </ul>

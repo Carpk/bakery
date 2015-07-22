@@ -1,8 +1,0 @@
-<p>Use this page to edit a specific dessert</p>
-
-<%= form_for @dessert, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
-  <%= file_field_tag 'picture' %>
-  <%= f.text_field :name, :required => true %></br>
-  <%= f.text_area :description, size: "60x12" %></br>
-  <%= f.submit "Save" %>
-<% end %>

@@ -23,13 +23,12 @@ class DessertsController < ApplicationController
 
   def update
     # dessert = Dessert.find(params[:id])
-    # puts "DESSERT: #{dessert}"
     # dessert.update(dessert_params)
     # redirect_to admin_desserts_path(session[:user])
   end
 
   def edit
-    # @dessert = Dessert.find(params[:id])
+    @dessert = Dessert.find(params[:id])
   end
 
 

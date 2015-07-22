@@ -1,9 +1,10 @@
 <div class="container translucent_background">
+  <h1>Edit Item:</h1>
   <div class="row">
     <div class="col-sm-1">
       <ul>
         <li ng-repeat="picture in dessert.pictures">
-            <img class="tiny-image clickable" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
+            <img class="tiny-image" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
         </li>
       </ul>
 

@@ -5,11 +5,15 @@
   )
 
   $scope.viewDessert = (id) ->
-    $location.url "/desserts/#{id}"
+    $location.url "/admins/#{adminId}/desserts/#{id}"
 
   $scope.editDessert = (id) ->
-    $location.url "/desserts/#{id}"
+    $location.url "/admins/#{adminId}/desserts/#{id}/edit"
 
   $scope.deleteDessert = (id) ->
-    $location.url "/desserts/#{id}"
+    $http.delete("./admins/#{adminId}/desserts/#{id}.json").success((data) ->
+      console.log(data)
+    )
+
+  # score = (this.created_at - toadys'date) / this.views
 ]
