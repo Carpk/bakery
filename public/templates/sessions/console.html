@@ -5,22 +5,53 @@
       <li><a href="">Edit Items</a></li>
       <li><a href="#/desserts/new">Create Item</a></li>
     </ul>
-    <div class="col-sm-10">
+    <div class="col-sm-10 translucent_background">
       <h1>Admin Console</h1>
 
       <ul class="list-group">
-        <div ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
-          <li class="list-group-item">
+        <!-- <div ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl"> -->
+          <!-- <li class="list-group-item">
             <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
             {{ dessert.name }}
             Views: {{ dessert.views }}
             Views per day: {{ dessert.views_per_day }}
-            <span class='pull-right'>
+            <span>
               <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
               <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
               <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
             </span>
-          </li>
+          </li> -->
+
+          <table class="table table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Views per day</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
+                <td>
+                  <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
+                  {{ dessert.name }}
+                </td>
+                <td>
+                  {{ dessert.views_per_day }}
+                </td>
+                <td>
+                  <span>
+                    <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
+                    <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
+                    <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
         </div>
       </ul>
 

@@ -13,12 +13,16 @@
     controller: 'DessertNewCtrl'
   }).
   when('/desserts/edit', {
-    templateUrl: '../templates/desserts/new.html',
+    templateUrl: '../templates/desserts/edit.html',
     controller: 'DessertNewCtrl'
   }).
   when('/desserts/:name', {
     templateUrl: '../templates/desserts/show.html',
     controller: 'DessertShowCtrl'
+  }).
+  when('/desserts/:name/pictures/new', {
+    templateUrl: '../templates/pictures/new.html',
+    controller: 'PictureNewCtrl'
   }).
   when('/about', {
     templateUrl: '../templates/about.html',

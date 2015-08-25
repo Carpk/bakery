@@ -16,7 +16,11 @@ Bakery::Application.routes.draw do
     # get 'dessert/:id' => 'desserts#show', as: :dessert
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :desserts
+    resources :desserts do
+      resources :pictures, only: [:new]
+    end
+
+    resources :uploader, only: [:new]
 
   # Example resource route with options:
   #   resources :products do

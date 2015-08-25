@@ -9,8 +9,8 @@ class DessertsController < ApplicationController
   end
 
   def new
-    token = S3provider.new.s3_access_token
-    render :json => token, :status => :ok
+    new_dessert = Dessert.new
+    render :json => new_dessert, :status => :ok
   end
 
   def create
