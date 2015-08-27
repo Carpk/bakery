@@ -14,7 +14,7 @@
   }).
   when('/desserts/edit', {
     templateUrl: '../templates/desserts/edit.html',
-    controller: 'DessertNewCtrl'
+    controller: 'DessertEditCtrl'
   }).
   when('/desserts/:name', {
     templateUrl: '../templates/desserts/show.html',

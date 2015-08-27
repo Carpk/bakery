@@ -1,5 +1,5 @@
 
-@bakery.controller 'DessertNewCtrl', ['$scope', '$http', '$timeout', '$compile', 'Upload', ($scope, $http, $timeout, $compile, Upload) ->
+@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$timeout', '$compile', 'Upload', ($scope, $http, $timeout, $compile, Upload) ->
   $scope.myImage = ''
   $scope.myCroppedImage = ''
   $scope.type = 'square'
@@ -58,6 +58,7 @@
     upload files if files isnt null
 
   $scope.createItem = () ->
+    console.log("From Pictures controller")
     console.log($scope.item)
 
   # readBlob = (blob) ->

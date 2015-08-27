@@ -14,11 +14,10 @@ class DessertsController < ApplicationController
   end
 
   def create
-    # puts dessert_params
-    # new_dessert = Dessert.new(dessert_params)
-    # if new_dessert.save
-    #   redirect_to admin_desserts_path(session[:user])
-    # end
+    new_dessert = Dessert.new(dessert_params)
+    if new_dessert.save
+      puts 'DESSERT HAS SAVED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    end
   end
 
   def update
@@ -41,6 +40,6 @@ class DessertsController < ApplicationController
   private
 
   def dessert_params
-    params.require(:dessert).permit(:name, :description)
+    params.require(:dessert).permit(:name, :category, :price, :ingredients, :description)
   end
 end
