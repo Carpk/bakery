@@ -1,10 +1,9 @@
 class PicturesController < ApplicationController
 
   def new
-    puts "params are:"
-    puts params
+    dessert = Dessert.find_by_name(params[:dessert_id])
     new_pic = Picture.new
-    new_pic.dessert_id = "12"
+    new_pic.dessert_id = dessert.id if dessert
     render :json => new_pic, :status => :ok
   end
 

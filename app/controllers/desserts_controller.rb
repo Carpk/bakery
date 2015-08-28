@@ -16,7 +16,7 @@ class DessertsController < ApplicationController
   def create
     new_dessert = Dessert.new(dessert_params)
     if new_dessert.save
-      puts 'DESSERT HAS SAVED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+      puts 'DESSERT HAS SAVED!'
     end
   end
 

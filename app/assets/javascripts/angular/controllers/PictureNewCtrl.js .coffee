@@ -1,13 +1,17 @@
 
-@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$timeout', '$compile', 'Upload', ($scope, $http, $timeout, $compile, Upload) ->
+@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$routeParams', '$timeout', '$compile', 'Upload', ($scope, $http, $routeParams, $timeout, $compile, Upload) ->
   $scope.myImage = ''
   $scope.myCroppedImage = ''
   $scope.type = 'square'
 
-
-  $http.get('./pictures/new.json').success((data) ->
-      $scope.item = data
+  $http.get("./desserts/#{$routeParams.name}/pictures/new.json").success((data) ->
+    console.log(data)
+    $scope.item = data
   )
+
+  # $http.get('./pictures/new.json').success((data) ->
+  #     $scope.item = data
+  # )
 
   handleFileSelect = (evt) ->
     file = evt.currentTarget.files[0]
