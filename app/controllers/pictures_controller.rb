@@ -7,4 +7,19 @@ class PicturesController < ApplicationController
     render :json => new_pic, :status => :ok
   end
 
+  def create
+    puts params
+    pic = Picture.new(picture_params)
+    if pic.save
+      puts "pic saved!"
+    else
+      puts "pic did not save."
+    end
+  end
+
+  private
+
+  def picture_params
+    params.require(:picture).permit(:name, :dessert_id, :picture_url)
+  end
 end

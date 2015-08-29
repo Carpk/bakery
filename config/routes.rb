@@ -17,7 +17,7 @@ Bakery::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :desserts do
-      resources :pictures, only: [:new]
+      resources :pictures, only: [:new, :create]
     end
 
     resources :uploader, only: [:new]

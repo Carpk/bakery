@@ -9,10 +9,6 @@
     $scope.item = data
   )
 
-  # $http.get('./pictures/new.json').success((data) ->
-  #     $scope.item = data
-  # )
-
   handleFileSelect = (evt) ->
     file = evt.currentTarget.files[0]
     reader = new FileReader()
@@ -41,7 +37,9 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log(config)
+      console.log("config:" + config)
+      $http.post("./desserts/#{$routeParams.name}/pictures", $scope.item)
+
     )
 
   dataURItoBlob = (dataURI) ->
@@ -61,9 +59,9 @@
   $scope.uploadPic = (files) ->
     upload files if files isnt null
 
-  $scope.createItem = () ->
-    console.log("From Pictures controller")
-    console.log($scope.item)
+  # $scope.createItem = () ->
+  #   console.log("From Pictures controller")
+  #   console.log($scope.item)
 
   # readBlob = (blob) ->
   #   reader = new FileReader
