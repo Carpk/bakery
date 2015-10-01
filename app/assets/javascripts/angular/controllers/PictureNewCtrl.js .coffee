@@ -5,7 +5,6 @@
   $scope.type = 'square'
 
   $http.get("./desserts/#{$routeParams.name}/pictures/new.json").success((data) ->
-    console.log(data)
     $scope.item = data
   )
 
@@ -37,7 +36,7 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log("config:" + config)
+      console.log($scope.item)
       $http.post("./desserts/#{$routeParams.name}/pictures", $scope.item)
 
     )
