@@ -18,4 +18,10 @@ Download the repo, and run the following commands from the root directory:
 
 `rake db:seed`
 
+###Screenshot
 
+![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/admin_console.png)
+
+![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/create_dessert.png)
+
+![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/crop_image.png)

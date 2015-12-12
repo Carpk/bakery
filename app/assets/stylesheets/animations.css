@@ -14,17 +14,6 @@
   overflow: hidden;
 }
 
-.fadein.ng-enter-stagger {
-  transition-delay: 0.1s ;
-    -webkit-transition-delay: 0.01s ;
-  /*
-    FROM THE DOCUMENTATION:
-    In case the stagger doesn't work then these two values must be set
-    to 0 to avoid an accidental CSS inheritance.
-  */
-  transition-duration: 0s ;
-    -webkit-transition-duration: 0s ;
-}
 
 .dessert-listing.ng-move.ng-move-active,
 .dessert-listing.ng-enter.ng-enter-active {
@@ -46,14 +35,26 @@
 
 
 
+
+.fadein.ng-enter-stagger {
+  transition-delay: 0.1s ;
+    -webkit-transition-delay: 0.01s ;
+  /*
+    FROM THE DOCUMENTATION:
+    In case the stagger doesn't work then these two values must be set
+    to 0 to avoid an accidental CSS inheritance.
+  */
+  transition-duration: 0s ;
+    -webkit-transition-duration: 0s ;
+}
+
+
 .fadein {
   transition: 2s linear all;
   -webkit-transition: 2s linear all;
   -moz-transition: 2s linear all;
   -o-transition: 2s linear all;
 }
-
-
 
 .fadein.ng-enter {
   opacity: 0;
