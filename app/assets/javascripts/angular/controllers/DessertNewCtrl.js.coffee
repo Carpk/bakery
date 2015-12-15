@@ -5,7 +5,7 @@
   )
 
   $scope.createItem = () ->
-    $http.post('./desserts', $scope.item)
+    $http.post('./desserts.json', $scope.item)
     $location.url "/desserts/#{$scope.item.name}/pictures/new"
 
 ]

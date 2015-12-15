@@ -1,4 +1,5 @@
 class DessertsController < ApplicationController
+  respond_to :json, :html
 
   def index
     @desserts = Dessert.all
@@ -14,7 +15,8 @@ class DessertsController < ApplicationController
   end
 
   def create
-    new_dessert = Dessert.new(dessert_params)
+    @new_dessert = Dessert.new(dessert_params)
+    @new_dessert.save
   end
 
   def update
@@ -29,9 +31,9 @@ class DessertsController < ApplicationController
 
 
   def destroy
-    # Dessert.find(params[:id]).destroy
-    # puts params
-    # redirect_to admin_desserts_path(session[:user])
+    Dessert.find(params[:id]).destroy
+    puts params
+    redirect_to admin_desserts_path(session[:user])
   end
 
   private
