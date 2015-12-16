@@ -36,10 +36,8 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log($scope.item.picture_url)
       $http.post("./desserts/#{$routeParams.name}/pictures.json", $scope.item)
       $location.url "/admin_console"
-
     )
 
   dataURItoBlob = (dataURI) ->

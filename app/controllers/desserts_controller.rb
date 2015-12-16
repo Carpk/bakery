@@ -20,7 +20,6 @@ class DessertsController < ApplicationController
   def update
     # dessert = Dessert.find(params[:id])
     # dessert.update(dessert_params)
-    # redirect_to admin_desserts_path(session[:user])
   end
 
   def edit
@@ -29,9 +28,9 @@ class DessertsController < ApplicationController
 
 
   def destroy
-    Dessert.find(params[:id]).destroy
-    puts params
-    redirect_to admin_desserts_path(session[:user])
+    deleting_item = Dessert.find(params[:id])
+    deleting_item.pictures.map {|pic| pic.destroy}
+    deleting_item.destroy
   end
 
   private
