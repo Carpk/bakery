@@ -1,5 +1,5 @@
 
-@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$routeParams', '$timeout', '$compile', 'Upload', ($scope, $http, $routeParams, $timeout, $compile, Upload) ->
+@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$routeParams', '$timeout', '$compile', 'Upload', '$location',($scope, $http, $routeParams, $timeout, $compile, Upload, $location) ->
   $scope.myImage = ''
   $scope.myCroppedImage = ''
   $scope.type = 'square'
@@ -36,11 +36,9 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log(data)
-      console.log(config)
-      $scope.item.picture_url = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQdk_bOXNCCWPH0f1sUU4RPpE5j5vaQwB9h_NNcKu4sFinbUoKzGw'
       console.log($scope.item.picture_url)
       $http.post("./desserts/#{$routeParams.name}/pictures.json", $scope.item)
+      $location.url "/admin_console"
 
     )
 
@@ -55,7 +53,8 @@
   upload = (dataURI) ->
     $scope.errorMsg = null
     blob = dataURItoBlob dataURI
-    blob.name = Math.floor((Math.random() * 100000) + 1)
+    blob.name = Math.floor((Math.random() * 900000) + 1)
+    $scope.item.picture_url = "https://s3.amazonaws.com/tatianasbakery/" + blob.name
     uploadS3 blob
 
   $scope.uploadPic = (files) ->
