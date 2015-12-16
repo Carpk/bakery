@@ -36,8 +36,11 @@
         file: file,
       })
     ).success( (data, status, headers, config) ->
-      console.log($scope.item)
-      $http.post("./desserts/#{$routeParams.name}/pictures", $scope.item)
+      console.log(data)
+      console.log(config)
+      $scope.item.picture_url = 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQdk_bOXNCCWPH0f1sUU4RPpE5j5vaQwB9h_NNcKu4sFinbUoKzGw'
+      console.log($scope.item.picture_url)
+      $http.post("./desserts/#{$routeParams.name}/pictures.json", $scope.item)
 
     )
 

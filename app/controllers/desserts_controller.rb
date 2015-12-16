@@ -1,5 +1,4 @@
 class DessertsController < ApplicationController
-  respond_to :json, :html
 
   def index
     @desserts = Dessert.all
@@ -10,8 +9,7 @@ class DessertsController < ApplicationController
   end
 
   def new
-    new_dessert = Dessert.new
-    render :json => new_dessert, :status => :ok
+    @new_dessert = Dessert.new
   end
 
   def create
