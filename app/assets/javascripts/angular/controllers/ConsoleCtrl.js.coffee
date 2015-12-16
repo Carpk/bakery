@@ -3,7 +3,7 @@
   $http.get("./admins.json").success((data) ->
     $scope.dessertList = data
   )
-
+  adminId = 1
   $scope.viewDessert = (id) ->
     $location.url "/admins/#{adminId}/desserts/#{id}"
 
@@ -11,9 +11,9 @@
     $location.url "/admins/#{adminId}/desserts/#{id}/edit"
 
   $scope.deleteDessert = (id) ->
-    $http.delete("./admins/#{adminId}/desserts/#{id}.json").success((data) ->
-      console.log(data)
-    )
+    if confirm("You are about to permanently delete this item") == true
+      $http.delete("./admins/#{adminId}/desserts/#{id}.json").success((data) ->
+        location.reload(true)
+      )
 
-  # score = (this.created_at - toadys'date) / this.views
 ]
