@@ -4,9 +4,14 @@
     $scope.mainImageUrl = data.pictures[0].picture_url
   )
 
+  $scope.deletePicture = (id) ->
+    if confirm("You are about to permanently delete this picture") == true
+      $http.delete("./desserts/#{$scope.dessert.id}/pictures/#{id}.json").success((data) ->
+        location.reload(true)
+      )
 
   $scope.updateItem = () ->
     $http.patch("./desserts/#{$scope.dessert.id}.json", $scope.dessert)
-    # $location.url "/admin_console"
+    $location.url "/admin_console"
 
 ]

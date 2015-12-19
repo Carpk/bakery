@@ -5,6 +5,7 @@
       <ul>
         <li ng-repeat="picture in dessert.pictures">
             <img class="tiny-image" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
+            <a ng-click="deletePicture(picture.id)" class="nav-link clickable">delete</a>
         </li>
       </ul>
 
@@ -25,7 +26,7 @@
         <input type="text" name="ingredients" ng-model ="dessert.ingredients"><br>
         Description:<br>
         <textarea name="descriptions" ng-model ="dessert.description"></textarea><br>
-        <input type="submit" value="Update">
+        <input type="submit" value="Save Changes">
       </form>
     </div>
   </div>
