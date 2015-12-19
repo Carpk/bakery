@@ -2,9 +2,10 @@ class PicturesController < ApplicationController
 
   def new
     dessert = Dessert.find_by_name(params[:dessert_id])
-    new_pic = Picture.new
-    new_pic.dessert_id = dessert.id if dessert
-    new_pic
+    @new_pic = Picture.new
+    @new_pic.dessert_id = dessert.id if dessert
+    puts @new_pic.inspect
+    @new_pic
   end
 
   def create

@@ -14,4 +14,7 @@
     $http.patch("./desserts/#{$scope.dessert.id}.json", $scope.dessert)
     $location.url "/admin_console"
 
+  $scope.uploadPicture = () ->
+    $location.url "/desserts/#{$scope.dessert.name}/pictures/new"
+
 ]
