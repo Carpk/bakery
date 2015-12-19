@@ -18,8 +18,8 @@ class DessertsController < ApplicationController
   end
 
   def update
-    # dessert = Dessert.find(params[:id])
-    # dessert.update(dessert_params)
+    dessert = Dessert.find(params[:id])
+    dessert.update(dessert_params)
   end
 
   def edit

@@ -10,12 +10,7 @@ class PicturesController < ApplicationController
   end
 
   def create
-    pic = Picture.new(picture_params)
-    if pic.save
-      puts "pic saved!"
-    else
-      puts "pic did not save."
-    end
+    Picture.create(picture_params)
   end
 
   private

@@ -1,4 +1,4 @@
-@bakery.controller 'DessertEditCtrl', ['$scope', '$http', '$routeParams', ($scope, $http, $routeParams) ->
+@bakery.controller 'DessertEditCtrl', ['$scope', '$http', '$location', '$routeParams', ($scope, $http, $location, $routeParams) ->
   $http.get("./desserts/#{$routeParams.id}/edit.json").success((data) ->
     $scope.dessert = data
     $scope.mainImageUrl = data.pictures[0].picture_url
@@ -6,7 +6,7 @@
 
 
   $scope.updateItem = () ->
-    $http.post('./desserts.json', $scope.item)
-    $location.url "/desserts/#{$scope.item.name}/pictures/new"
+    $http.patch("./desserts/#{$scope.dessert.id}.json", $scope.dessert)
+    # $location.url "/admin_console"
 
 ]
