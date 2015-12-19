@@ -3,7 +3,9 @@
   $http.get("./admins.json").success((data) ->
     $scope.dessertList = data
   )
+
   adminId = 1
+
   $scope.viewDessert = (id) ->
     $location.url "/admins/#{adminId}/desserts/#{id}"
 

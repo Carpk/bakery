@@ -12,10 +12,6 @@
     templateUrl: '../templates/desserts/new.html',
     controller: 'DessertNewCtrl'
   }).
-  when('/desserts/edit', {
-    templateUrl: '../templates/desserts/edit.html',
-    controller: 'DessertEditCtrl'
-  }).
   when('/desserts/:name', {
     templateUrl: '../templates/desserts/show.html',
     controller: 'DessertShowCtrl'
@@ -45,6 +41,10 @@
   when('/admin_console', {
     templateUrl: '../templates/sessions/console.html',
     controller: 'ConsoleCtrl'
+  }).
+  when('/admins/:admin_id/desserts/:id/edit', {
+    templateUrl: '../templates/desserts/edit.html',
+    controller: 'DessertEditCtrl'
   }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',

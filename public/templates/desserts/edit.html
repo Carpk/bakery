@@ -13,8 +13,20 @@
       <img class="full-image" ng-src="{{mainImageUrl}}"></a>
     </div>
     <div class="col-sm-4">
-      <h1>{{dessert.name}}</h1>
-      <p>{{dessert.description}}</p>
+
+      <form ng-submit="updateItem()">
+        Item Name:<br>
+        <input type="text" name="name" ng-model ="dessert.name"><br>
+        Category:<br>
+        <input type="text" name="category" ng-model ="dessert.category"><br>
+        Price:<br>
+        <input type="text" name="price" ng-model ="dessert.price"><br>
+        Ingredients: <small>allergen alert</small><br>
+        <input type="text" name="ingredients" ng-model ="dessert.ingredients"><br>
+        Description:<br>
+        <textarea name="descriptions" ng-model ="dessert.description"></textarea><br>
+        <input type="submit" value="Update">
+      </form>
     </div>
   </div>
 </div>
