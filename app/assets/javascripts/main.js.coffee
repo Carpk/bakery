@@ -46,6 +46,10 @@
     templateUrl: '../templates/desserts/edit.html',
     controller: 'DessertEditCtrl'
   }).
+  when('/admins/:admin_id/desserts/:name', {
+    templateUrl: '../templates/desserts/show.html',
+    controller: 'DessertShowCtrl'
+  }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',
     controller: 'HomeCtrl'

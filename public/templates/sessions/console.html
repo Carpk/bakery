@@ -26,8 +26,8 @@
             <thead>
               <tr>
                 <th>Item</th>
-                <th>Views per day</th>
-                <th>Actions</th>
+                <th><center>Views per day</center></th>
+                <th><center>Actions</center></th>
               </tr>
             </thead>
             <tbody>
@@ -37,14 +37,16 @@
                   {{ dessert.name }}
                 </td>
                 <td>
-                  {{ dessert.views_per_day }}
+                  <center>{{ dessert.views_per_day }}</center>
                 </td>
                 <td>
+                <center>
                   <span>
                     <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
                     <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
                     <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
                   </span>
+                </center>
                 </td>
               </tr>
             </tbody>
