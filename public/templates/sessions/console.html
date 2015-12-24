@@ -9,19 +9,6 @@
       <h1>Admin Console</h1>
 
       <ul class="list-group">
-        <!-- <div ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl"> -->
-          <!-- <li class="list-group-item">
-            <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
-            {{ dessert.name }}
-            Views: {{ dessert.views }}
-            Views per day: {{ dessert.views_per_day }}
-            <span>
-              <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
-              <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
-              <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
-            </span>
-          </li> -->
-
           <table class="table table">
             <thead>
               <tr>
@@ -40,25 +27,17 @@
                   <center>{{ dessert.views_per_day }}</center>
                 </td>
                 <td>
-                <center>
-                  <span>
+                  <center><span>
                     <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">view</a> |
                     <a ng-click="editDessert(dessert.id)" class="nav-link clickable">edit</a> |
                     <a ng-click="deleteDessert(dessert.id)" class="nav-link clickable">delete</a>
-                  </span>
-                </center>
+                  </span></center>
                 </td>
               </tr>
             </tbody>
           </table>
-
-
-
         </div>
       </ul>
-
-
-
     </div>
   </div>
 </div>

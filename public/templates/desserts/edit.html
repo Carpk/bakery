@@ -26,6 +26,10 @@
         <input type="text" name="ingredients" ng-model ="dessert.ingredients"><br>
         Description:<br>
         <textarea name="descriptions" ng-model ="dessert.description"></textarea><br>
+        <label>
+          <input type="checkbox" ng-model="dessert.disable">
+          Disable viewing of item
+        </label>
         <input type="submit" value="Save Changes">
       </form>
       <a ng-click="uploadPicture()" class="nav-link clickable">Upload Picture</a>
