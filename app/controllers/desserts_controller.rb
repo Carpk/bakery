@@ -36,6 +36,6 @@ class DessertsController < ApplicationController
   private
 
   def dessert_params
-    params.require(:dessert).permit(:name, :category, :price, :ingredients, :description)
+    params.require(:dessert).permit(:name, :category, :price, :ingredients, :description, :disable)
   end
 end

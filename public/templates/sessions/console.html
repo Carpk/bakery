@@ -12,6 +12,7 @@
           <table class="table table">
             <thead>
               <tr>
+                <th>Disable</th>
                 <th>Item</th>
                 <th><center>Views per day</center></th>
                 <th><center>Actions</center></th>
@@ -19,6 +20,9 @@
             </thead>
             <tbody>
               <tr ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
+                <td>
+                  <input type="checkbox" ng-model="dessert.disable">
+                </td>
                 <td>
                   <img class="tiny-image" ng-src="{{dessert.pictures[0].picture_url}}">
                   {{ dessert.name }}

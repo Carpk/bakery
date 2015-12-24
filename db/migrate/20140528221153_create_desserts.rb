@@ -7,6 +7,7 @@ class CreateDesserts < ActiveRecord::Migration
       t.text 	  :ingredients
       t.integer :views
       t.integer :price
+      t.boolean :disable, default: false
 
       t.timestamps
     end
