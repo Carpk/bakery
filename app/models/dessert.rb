@@ -9,4 +9,13 @@ class Dessert < ActiveRecord::Base
   def self.filtered_view
     self.all.delete_if {|item| item.disable}
   end
+
+  def increment_views
+    self.views += 1
+    self
+  end
+
+  def delete_pics
+    self.pictures.map {|pic| pic.destroy}
+  end
 end

@@ -6,8 +6,8 @@ class DessertsController < ApplicationController
 
   def show
     @dessert = Dessert.find_by_name(params[:id])
-    @dessert.views += 1
-    @dessert.save
+    @dessert.increment_views.save
+    @dessert
   end
 
   def new
@@ -31,7 +31,7 @@ class DessertsController < ApplicationController
 
   def destroy
     deleting_item = Dessert.find(params[:id])
-    deleting_item.pictures.map {|pic| pic.destroy}
+    deleting_item.delete_pics
     deleting_item.destroy
   end
 
