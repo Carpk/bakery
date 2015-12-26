@@ -5,7 +5,9 @@ class DessertsController < ApplicationController
   end
 
   def show
-    @desserts = Dessert.find_by_name(params[:id])
+    @dessert = Dessert.find_by_name(params[:id])
+    @dessert.views += 1
+    @dessert.save
   end
 
   def new
