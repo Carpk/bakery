@@ -4,11 +4,15 @@
     $scope.mainImageUrl = data.pictures[0].picture_url
   )
 
-  $scope.deletePicture = (id) ->
+  $scope.deletePicture = (picId) ->
     if confirm("You are about to permanently delete this picture") == true
-      $http.delete("./desserts/#{$scope.dessert.id}/pictures/#{id}.json").success((data) ->
+      $http.delete("./desserts/#{$scope.dessert.id}/pictures/#{picId}.json").success((data) ->
         location.reload(true)
       )
+
+  $scope.setDefault = (picId) ->
+    $http.patch("./desserts/#{$scope.dessert.id}/pictures/#{picId}.json", $scope.dessert)
+    location.reload(true)
 
   $scope.updateItem = () ->
     $http.patch("./desserts/#{$scope.dessert.id}.json", $scope.dessert)
