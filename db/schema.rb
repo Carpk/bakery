@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150618003134) do
   create_table "pictures", force: true do |t|
     t.integer  "dessert_id"
     t.string   "name"
+    t.boolean  "default",     default: false
     t.string   "picture_url"
     t.datetime "created_at"
     t.datetime "updated_at"

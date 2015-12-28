@@ -4,8 +4,10 @@
     <div class="col-sm-1">
       <ul>
         <li ng-repeat="picture in dessert.pictures">
-            <img class="tiny-image" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
-            <a ng-click="deletePicture(picture.id)" class="nav-link clickable">delete</a>
+          <input type="radio" ng-model="picture.default" value="true">
+          {{picture.default}}
+          <img class="tiny-image" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
+          <a ng-click="deletePicture(picture.id)" class="nav-link clickable">delete</a>
         </li>
       </ul>
 
