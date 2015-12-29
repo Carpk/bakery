@@ -1,6 +1,7 @@
 class Picture < ActiveRecord::Base
   belongs_to :dessert
 
+
   def self.remove_main(dessert_id)
     all_pics = Picture.where(dessert_id: dessert_id)
     defaulted_pics = Picture.default_pics(all_pics)

@@ -30,9 +30,7 @@ class DessertsController < ApplicationController
 
 
   def destroy
-    deleting_item = Dessert.find(params[:id])
-    deleting_item.delete_pics
-    deleting_item.destroy
+    Dessert.find(params[:id]).destroy
   end
 
   private

@@ -1,6 +1,7 @@
 class Dessert < ActiveRecord::Base
   has_many :pictures
   has_many :reviews
+  before_destroy :delete_pics
 
   def views_per_day
     (self.views.to_f/((Time.now - self.created_at)/1.day)).round(4)
@@ -16,6 +17,6 @@ class Dessert < ActiveRecord::Base
   end
 
   def delete_pics
-    self.pictures.map {|pic| pic.destroy}
+    self.pictures.map! {|pic| pic.destroy}
   end
 end
