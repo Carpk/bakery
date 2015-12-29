@@ -12,17 +12,11 @@ class PicturesController < ApplicationController
   end
 
   def update
-    p "******************************"
-    old_default = Picture.where(dessert_id: params[:dessert_id]).select {|pic| pic.default == true}
-    old_default.map do |e|
-      e.default = false
-      e.save
-    end
-    # old_default.save
+    Picture.remove_main(params[:dessert_id])
+
     main = Picture.find_by_id(params[:id])
     main.default = true
     main.save
-    p "******************************"
   end
 
   def destroy
