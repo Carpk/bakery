@@ -12,11 +12,9 @@ class PicturesController < ApplicationController
   end
 
   def update
-    Picture.remove_main(params[:dessert_id])
-
     main = Picture.find_by_id(params[:id])
-    main.default = true
-    main.save
+    main.clear_defaults
+    main.set_as_default.save
   end
 
   def destroy
