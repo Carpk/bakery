@@ -13,7 +13,6 @@ class PicturesController < ApplicationController
 
   def update
     main = Picture.find_by_id(params[:id])
-    main.clear_defaults
     main.set_as_default.save
   end
 
