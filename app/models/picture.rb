@@ -1,13 +1,13 @@
 class Picture < ActiveRecord::Base
   belongs_to :dessert
-  before_save :clear_defaults
+  before_update :clear_main
 
-  def clear_defaults
+  def clear_main
     defaults_arry = Picture.where(default: true, dessert_id: self.dessert_id )
     defaults_arry.update_all(default: false)
   end
 
-  def set_as_default
+  def set_as_main
     self.default = true
     self
   end

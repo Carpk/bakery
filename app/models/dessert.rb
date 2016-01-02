@@ -16,6 +16,10 @@ class Dessert < ActiveRecord::Base
     self
   end
 
+  def main_pic
+    self.pictures.find {|pic| pic.default == true}.picture_url
+  end
+
   def delete_pics
     self.pictures.map! {|pic| pic.destroy}
   end
