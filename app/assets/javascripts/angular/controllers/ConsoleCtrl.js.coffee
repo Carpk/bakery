@@ -1,5 +1,6 @@
 @bakery.controller 'ConsoleCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
   $scope.dessertList = []
+
   $http.get("./admins.json").success((data) ->
     $scope.dessertList = data
   )

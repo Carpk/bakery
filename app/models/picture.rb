@@ -8,8 +8,7 @@ class Picture < ActiveRecord::Base
   end
 
   def set_as_main
-    self.default = true
-    self
+    self.tap { |i| i.default = true }
   end
 end
 
