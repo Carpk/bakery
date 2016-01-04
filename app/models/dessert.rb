@@ -12,8 +12,7 @@ class Dessert < ActiveRecord::Base
   end
 
   def increment_views
-    self.views += 1
-    self
+    self.tap { |i| i.views += 1 }
   end
 
   def main_pic
