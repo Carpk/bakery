@@ -12,7 +12,7 @@ class Dessert < ActiveRecord::Base
   end
 
   def increment_views
-    self.tap { |i| i.views += 1 }
+    self.tap { |i| i.views += 1 }.save
   end
 
   def main_pic
@@ -21,5 +21,9 @@ class Dessert < ActiveRecord::Base
 
   def delete_pics
     self.pictures.map! {|pic| pic.destroy}
+  end
+
+  def reset_view_count
+    self.tap { |i| i.views = 0 }.save
   end
 end

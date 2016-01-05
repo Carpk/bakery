@@ -10,5 +10,9 @@ class Picture < ActiveRecord::Base
   def set_as_main
     self.tap { |i| i.default = true }
   end
+
+  def reset_view_count
+    self
+  end
 end
 

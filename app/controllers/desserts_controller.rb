@@ -6,7 +6,7 @@ class DessertsController < ApplicationController
 
   def show
     @dessert = Dessert.find_by_name(params[:id])
-    @dessert.increment_views.save
+    @dessert.increment_views
     @dessert
   end
 

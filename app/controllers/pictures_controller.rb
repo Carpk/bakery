@@ -14,6 +14,7 @@ class PicturesController < ApplicationController
   def update
     main = Picture.find_by_id(params[:id])
     main.set_as_main.save
+    main.dessert.reset_view_count
   end
 
   def destroy
