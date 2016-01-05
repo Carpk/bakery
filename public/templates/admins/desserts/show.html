@@ -1,0 +1,19 @@
+<div class="container translucent_background">
+  <div class="row">
+    <div class="col-sm-1">
+      <ul>
+        <li ng-repeat="picture in dessert.pictures">
+            <img class="tiny-image clickable" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-sm-7">
+      <img class="full-image" ng-src="{{mainImageUrl}}"></a>
+    </div>
+    <div class="col-sm-4">
+      <h1>{{dessert.name}}</h1>
+      <p>{{dessert.description}}</p>
+    </div>
+  </div>
+</div>

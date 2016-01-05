@@ -43,12 +43,12 @@
     controller: 'ConsoleCtrl'
   }).
   when('/admins/:admin_id/desserts/:id/edit', {
-    templateUrl: '../templates/desserts/edit.html',
-    controller: 'DessertEditCtrl'
+    templateUrl: '../templates/admins/desserts/edit.html',
+    controller: 'AdminDessertEditCtrl'
   }).
   when('/admins/:admin_id/desserts/:name', {
-    templateUrl: '../templates/desserts/show.html',
-    controller: 'DessertShowCtrl'
+    templateUrl: '../templates/admins/desserts/show.html',
+    controller: 'AdminDessertShowCtrl'
   }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',
