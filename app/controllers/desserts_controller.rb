@@ -1,7 +1,7 @@
 class DessertsController < ApplicationController
 
   def index
-    @desserts = Dessert.filtered_view
+    @desserts = Dessert.all_items(params[:admin_id])
   end
 
   def show

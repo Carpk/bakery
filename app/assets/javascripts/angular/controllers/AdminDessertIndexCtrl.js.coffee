@@ -1,11 +1,11 @@
-@bakery.controller 'ConsoleCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
+@bakery.controller 'AdminDessertIndexCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
   $scope.dessertList = []
 
-  $http.get("./admins.json").success((data) ->
+  adminId = 1
+
+  $http.get("./admins/#{adminId}/desserts.json").success((data) ->
     $scope.dessertList = data
   )
-
-  adminId = 1
 
   $scope.viewDessert = (id) ->
     $location.url "/admins/#{adminId}/desserts/#{id}"

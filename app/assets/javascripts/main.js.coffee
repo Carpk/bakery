@@ -36,11 +36,11 @@
   }).
   when('/admins/console', {
     templateUrl: '../templates/sessions/console.html',
-    controller: 'ConsoleCtrl'
+    controller: 'AdminDessertIndexCtrl'
   }).
   when('/admin_console', {
     templateUrl: '../templates/sessions/console.html',
-    controller: 'ConsoleCtrl'
+    controller: 'AdminDessertIndexCtrl'
   }).
   when('/admins/:admin_id/desserts/:id/edit', {
     templateUrl: '../templates/admins/desserts/edit.html',

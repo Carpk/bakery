@@ -11,6 +11,14 @@ class Dessert < ActiveRecord::Base
     self.all.delete_if {|item| item.disable}
   end
 
+  def self.all_items(admin_id)
+    if admin_id
+      Dessert.all.sort
+    else
+      Dessert.filtered_view.sort
+    end
+  end
+
   def increment_views
     self.tap { |i| i.views += 1 }.save
   end
