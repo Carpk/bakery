@@ -2,7 +2,7 @@
 
   adminId = 1
 
-  $http.get("./desserts/#{$routeParams.id}/edit.json").success((data) ->
+  $http.get("./admins/#{adminId}/desserts/#{$routeParams.id}/edit.json").success((data) ->
     $scope.dessert = data
     $scope.mainImageUrl = data.main_pic
   )
