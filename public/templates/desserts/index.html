@@ -5,19 +5,19 @@
       <option value="name">Alphabetical</option>
       <option value="age">Newest</option>
     </select>
-  <div class="row">
-    <div class="col-sm-12">
-      <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp" class="fadein">
-        <div class="pull-left dessert_list translucent_background">
-          <center>
-            <a ng-click="viewDessert(dessert.name)" class="nav-link">
-              <img class="sample-image" ng-src="{{dessert.main_pic}}">
-              {{ dessert.name }}
-            </a>
-          </center>
-        </div>
+
+  <div class="row translucent_background">
+    <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp" class="fadein">
+      <div class="clearfix" ng-if="$index % 3 == 0"></div>
+      <div class="col-sm-4">
+        <center>
+          <a ng-click="viewDessert(dessert.name)" class="nav-link">
+            <img class="sample-image" ng-src="{{dessert.main_pic}}">
+            {{ dessert.name }}
+          </a>
+        </center>
       </div>
     </div>
-
   </div>
+
 </div>
