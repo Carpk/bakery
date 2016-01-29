@@ -1,6 +1,6 @@
 
 @bakery = angular.module('bakery', [
-  'Devise', 'ngRoute', 'ngImgCrop', 'bakeryAnimations', 'ngFileUpload'
+  'ngMap','Devise', 'ngRoute', 'ngImgCrop', 'bakeryAnimations', 'ngFileUpload'
 ])
 .config(['$routeProvider', ($routeProvider) ->
   $routeProvider.
