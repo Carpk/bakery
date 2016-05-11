@@ -12,6 +12,27 @@
  *= require_tree .
  */
 
+@font-face {
+  font-family: "NotoSerif-BoldItalic";
+  src: url('<%= asset_path("NotoSerif-BoldItalic.ttf") %>') format('truetype');
+}
+
+h1 {
+  font-family: 'NotoSerif-BoldItalic';
+}
+
+.jum-nav {
+  margin-left: 140px;
+}
+
+.jum-nav a {
+  color: #968679;
+}
+
+.jum-nav li a:hover {
+  background-color: transparent;
+}
+
 .background {
   background-image:url('<%= asset_path("countertop.jpg") %>');
   background-repeat: no-repeat;
@@ -113,7 +134,8 @@ table tbody tr td{
 }
 
 .jumbotron{
-  background-color: rgba(200, 173, 123, 0.8);
+  margin-top: 33vh;
+  background-color: rgba(200, 173, 123, 0.0);
 }
 
 .navbar-default .navbar-nav li a{

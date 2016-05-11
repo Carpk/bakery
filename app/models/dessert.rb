@@ -12,11 +12,7 @@ class Dessert < ActiveRecord::Base
   end
 
   def self.all_items(admin_id)
-    if admin_id
-      Dessert.all.sort
-    else
-      Dessert.filtered_view.sort
-    end
+    admin_id ? Dessert.all.sort : Dessert.filtered_view.sort
   end
 
   def increment_views

@@ -27,29 +27,9 @@
 </head>
 <body class='background'>
 
-<%= link_to(image_tag("tatianaslogo.png", :width => 240, :height => 144), root_path) %>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div>
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="/#/desserts">Desserts</a></li>
-        <li><a href="/#/about">About</a></li>
-        <li><a href="/#/contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<p class="notice alert-info"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 <div ng-view>
   <%= yield %>
 </div>
 
-<footer>
-  <div class="container-fluid footer">
-    <%= link_to "Manage",("#" + new_admin_session_path)  %>
-  </div>
-</footer>
 </body>
 </html>
