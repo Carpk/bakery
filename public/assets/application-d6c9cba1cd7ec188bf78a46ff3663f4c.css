@@ -1,0 +1,347 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+@font-face {
+  font-family: 'NotoSerif-BoldItalic';
+  src: url('/assets/NotoSerif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSerif-Regular';
+  src: url('/assets/NotoSerif-Regular.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'NotoSerif-BoldItalic';
+}
+
+.jum-nav {
+  letter-spacing: 3px;
+  margin-left: 140px;
+}
+
+.jum-nav a {
+  margin-right: 10px;
+  color: #968679;
+}
+
+.jum-nav li a:hover {
+  background-color: transparent;
+  color: #6B5848;
+}
+
+#nav-links {
+  margin-top: 19px;
+  letter-spacing: 1px;
+}
+
+#nav-search {
+  margin-top: 27px;
+}
+
+#dropdown-sort {
+  margin-top: 30px;
+}
+
+.center-welcome-msg {
+  margin-top: 33vh;
+}
+
+.background {
+  background-image:url('/assets/countertop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:  fixed;
+  background-color: #e0d8c9;
+}
+
+.navbar-header {
+  letter-spacing: 1px;
+}
+
+body .navbar-default {
+  background-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 30px;
+
+}
+
+.tiny-image {
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.sample-image {
+  width: 260px;
+  height: 260px;
+  margin-top: 12px;
+  display: block;
+/*  margin-left: auto;
+  margin-right: auto;*/
+}
+
+.sample-image:hover{
+  box-shadow: 3px 3px  5px black;
+}
+
+.full-image {
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+}
+
+table tbody tr td{
+  border-top: 1px solid #999;
+}
+
+.dessert_feature {
+  padding: 15px;
+}
+
+.dessert-list {
+  width: 300px;
+  height: 300px;
+  /*margin: 17px;*/
+  /*float: left;*/
+}
+
+.dessert-list a{
+  color: rgba(98, 76, 59, 0.8);
+  /*color: #624C3B;*/
+}
+
+.dessert-list a:hover{
+  color: #3F2E21;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dessert-list:hover{
+  background-color: rgba(200, 173, 123, 0.6);
+}
+
+.img-container{
+  background-image:url('/assets/landing-page.jpg ');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 65vw;
+  padding-top: 8em;
+  overflow: overlay;
+}
+
+.img-text{
+  text-shadow: 0px 0px 3px #CBA067;
+  color: black;
+}
+
+.landing-page-img{
+  width: 100%;
+}
+
+.navbar-default{
+  background-color: rgba(200, 173, 123, 0.4);
+  border-color: rgba(189, 173, 143, 0);
+  border-radius: 0;
+}
+
+.jumbotron{
+  background-color: rgba(200, 173, 123, 0.0);
+}
+
+.navbar-default .navbar-nav li a{
+  color: #624C3B;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "NotoSerif-Regular";
+  color: #635245;
+  margin-bottom: 8em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10em;
+  background-color: rgba(200, 173, 123, 0.4);
+}
+
+footer a {
+  color: #624C3B;
+}
+
+footer a:hover{
+  color: #3F2E21;
+}
+
+#map-canvas {
+  width: 25vw;
+  height: 25vw;
+}
+
+.animate-enter,
+.animate-leave {
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    left: 0px;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+    left: 30px;
+    opacity: 1;
+}
+
+.cropBox{
+  width: 800px;
+  height: 650px;
+}
+
+img-crop{
+ width: 100%;
+ height: 100%;
+ display: block;
+ position: relative;
+}
+
+img-crop canvas{
+  position: absolute;
+  top: 50%;
+  left: 50%
+}
+
+.cropArea {
+  background: #E4E4E4;
+  overflow: hidden;
+  width:466px;
+  height:350px;
+  float: right;
+}
+
+.table tbody tr td {
+  border-color: #524032;
+}
+
+.table thead tr th {
+  border-color: #524032;
+}
+
+form input {
+  width: 250px;
+}
+
+form textarea {
+  width: 250px;
+  height: 100px;
+}
+
+.edit-form input[type="checkbox"] {
+    width: 50px;
+}
+.dessert-listing.ng-enter,
+.dessert-listing.ng-leave,
+.dessert-listing.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.dessert-listing.ng-enter,
+.dessert-listing.ng-move {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+.dessert-listing.ng-move.ng-move-active,
+.dessert-listing.ng-enter.ng-enter-active {
+  opacity: 1;
+  height: 240px;
+}
+
+.dessert-listing.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.dessert-listing.ng-leave.ng-leave-active {
+  opacity: 0;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+.fadein.ng-enter-stagger {
+  transition-delay: 0.1s ;
+    -webkit-transition-delay: 0.01s ;
+  /*
+    FROM THE DOCUMENTATION:
+    In case the stagger doesn't work then these two values must be set
+    to 0 to avoid an accidental CSS inheritance.
+  */
+  transition-duration: 0s ;
+    -webkit-transition-duration: 0s ;
+}
+
+
+.fadein {
+  transition: 2s linear all;
+  -webkit-transition: 2s linear all;
+  -moz-transition: 2s linear all;
+  -o-transition: 2s linear all;
+}
+
+.fadein.ng-enter {
+  opacity: 0;
+}
+.fadein.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.fadein.ng-enter {
+  transition: 1s linear all;
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -o-transition: 1s linear all;
+}
