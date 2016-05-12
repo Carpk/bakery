@@ -20,8 +20,12 @@ Download the repo, and run the following commands from the root directory:
 
 ###Screenshot
 
+![landing page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/landing_page.png)
+
+![Dessert index page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/dessert_index.png)
+
 ![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/admin_console.png)
 
-![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/create_dessert.png)
+![Create a dessert](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/create_dessert.png)
 
-![Admin console page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/crop_image.png)
+![Cropping an image](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/crop_image.png)
