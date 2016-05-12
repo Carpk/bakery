@@ -17,6 +17,12 @@
 //= require angular-route
 //= require angular-devise
 //
+//= require angular-animate
+//= require animations
+//= require ng-file-upload-shim.min
+//= require ng-file-upload.min
+//= require ng-img-crop
+//
 //= require main
 //
 //= require_tree .
