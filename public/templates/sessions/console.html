@@ -2,8 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <h1>Tatiana's Bakery</h1>
-    </div>
-  
+    </div> 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
       <ul id="nav-links" class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
@@ -16,14 +15,18 @@
 </nav>
 <div class="container">
   <div class="row">
-    <ul class="col-sm-2" ng-controller="SessionCtrl">
-      <li role="presentation"><a href ="" ng-click="logOut()">Logout</a></li>
-      <li><a href="">Edit Items</a></li>
-      <li><a href="#/desserts/new">Create Item</a></li>
-    </ul>
-    <div class="col-sm-10 translucent_background">
+  <div class="col-sm-12">
+    <div class="pull-right" ng-controller="SessionCtrl">
+      <a href ="" role="presentation" ng-click="logOut()">Logout</a>
+      <a href="">Edit Items</a>
+      <a href="#/desserts/new">Create new Item</a>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 pale-background">
       <h1>Admin Console</h1>
-
       <ul class="list-group">
           <table class="table table">
             <thead>
@@ -59,5 +62,6 @@
         </div>
       </ul>
     </div>
+    <div class="col-sm-1"></div>
   </div>
 </div>

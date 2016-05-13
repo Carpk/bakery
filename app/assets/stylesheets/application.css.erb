@@ -23,7 +23,7 @@
   src: url('<%= asset_path("NotoSerif-Regular.ttf") %>') format('truetype');
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'NotoSerif-BoldItalic';
 }
 
@@ -67,6 +67,10 @@ h1 {
   background-color: #e0d8c9;
 }
 
+.pale-background {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 .navbar-header {
   letter-spacing: 1px;
 }
@@ -85,6 +89,10 @@ ul {
   margin-top: 20px;
   width: 60px;
   height: 60px;
+}
+
+td .tiny-image {
+  margin-top: 0;
 }
 
 .clickable{
