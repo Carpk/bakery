@@ -2,8 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <h1>Tatiana's Bakery</h1>
-    </div>
-  
+    </div>  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
       <ul id="nav-links" class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
@@ -15,18 +14,21 @@
   </div>
 </nav>
 <div class="container">
-  <h1>Edit Item:</h1>
+  <div class="pull-right admin-nav" ng-controller="SessionCtrl">
+    <a href ="" role="presentation" ng-click="logOut()">Logout</a>
+    <a ng-click="editDessert(dessert.id)">Edit Items</a>
+    <a href="#/desserts/new">Create new Item</a>
+  </div>
+  <h2>Edit Item:</h2>
   <div class="row">
     <div class="col-sm-1">
       <ul>
-
         <li ng-repeat="picture in dessert.pictures">
           {{picture.default}}
           <img class="tiny-image" ng-src="{{picture.picture_url}}" ng-click="setImage(picture.picture_url)">
           <a ng-click="setDefault(picture.id)" class="nav-link clickable">set default</a>
           <a ng-click="deletePicture(picture.id)" class="nav-link clickable">delete pic</a>
         </li>
-
       </ul>
     </div>
 
