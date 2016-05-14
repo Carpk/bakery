@@ -1,4 +1,4 @@
-@bakery.controller 'AdminDessertShowCtrl', ['$scope', '$http', '$routeParams', ($scope, $http, $routeParams) ->
+@bakery.controller 'AdminDessertShowCtrl', ['$scope', '$location', '$http', '$routeParams', ($scope, $location, $http, $routeParams) ->
 
   adminId = 1
 
@@ -6,6 +6,9 @@
     $scope.dessert = data
     $scope.mainImageUrl = data.main_pic
   )
+
+  $scope.editDessert = (id) ->
+      $location.url "/admins/#{adminId}/desserts/#{id}/edit"
 
   $scope.setImage = (imageUrl) ->
     $scope.mainImageUrl = imageUrl

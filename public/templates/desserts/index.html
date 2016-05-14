@@ -3,7 +3,6 @@
     <div class="navbar-header">
       <h1>Tatiana's Bakery</h1>
     </div>
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div id="dropdown-sort" class="dropdown navbar-right">
         Sort by:
@@ -34,7 +33,7 @@
       <div class="clearfix" ng-if="$index % 3 == 0"></div>
       <div class="col-sm-4">
         <center>
-          <a ng-click="viewDessert(dessert.name)" class="nav-link">
+          <a ng-click="viewDessert(dessert.name)" class="nav-link clickable">
             <img class="sample-image" ng-src="{{dessert.main_pic}}">
             {{ dessert.name }}
           </a>

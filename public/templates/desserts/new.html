@@ -17,9 +17,9 @@
   <div class "row">
     <div class="col-sm-12">
       <div class="pull-right admin-nav" ng-controller="SessionCtrl">
-        <a href ="" role="presentation" ng-click="logOut()">Logout</a>
-        <a href="">Edit Items</a>
         <a href="#/desserts/new">Create new Item</a>
+        <a href="" ng-click="editDessert(dessert.id)">Edit Categories</a>
+        <a href="" role="presentation" ng-click="logOut()">Logout</a>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
     <div class="col-sm-4"></div>
     <div class="col-sm-8" ng-controller="DessertNewCtrl">
       <h2>Create a New Item:</h2>
-      <form ng-submit="createItem()">
+      <form class="shift-right" ng-submit="createItem()">
         Item Name:<br>
         <input type="text" name="name" ng-model ="item.name"><br>
         Category:<br>
