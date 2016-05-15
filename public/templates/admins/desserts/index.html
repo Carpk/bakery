@@ -13,15 +13,16 @@
     </div>
   </div>
 </nav>
-<div class="container pale-background">
+<div class="container">
   <div class="row">
-    <ul class="col-sm-2" ng-controller="SessionCtrl">
-      <li role="presentation"><a href ="" ng-click="logOut()">Logout</a></li>
-      <li><a href="">Edit Items</a></li>
-      <li><a href="#/desserts/new">Create Item</a></li>
-    </ul>
-    <div class="col-sm-10">
-      <h1>Admin Console</h1>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 pale-background">
+    <div class="pull-right admin-nav" ng-controller="SessionCtrl">
+      <a href="#/desserts/new">Create new Item</a>
+      <a href="" ng-click="editDessert(dessert.id)">Edit Categories</a>
+      <a href="" role="presentation" ng-click="logOut()">Logout</a>
+    </div>
+      <h2>Admin Console</h2>
       <ul class="list-group">
           <table class="table table">
             <thead>
@@ -33,7 +34,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="dessert in dessertList" ng-controller="ConsoleCtrl">
+              <tr ng-repeat="dessert in dessertList" ng-controller="AdminDessertIndexCtrl">
                 <td>
                   <input type="checkbox" ng-model="dessert.disable">
                 </td>
@@ -57,5 +58,6 @@
         </div>
       </ul>
     </div>
+    <div class="col-sm-1"></div>
   </div>
 </div>

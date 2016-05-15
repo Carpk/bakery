@@ -16,8 +16,8 @@
     templateUrl: '../templates/desserts/show.html',
     controller: 'DessertShowCtrl'
   }).
-  when('/desserts/:name/pictures/new', {
-    templateUrl: '../templates/pictures/new.html',
+  when('/admins/:admin_id/desserts/:name/pictures/new', {
+    templateUrl: '../templates/admins/desserts/pictures/new.html',
     controller: 'PictureNewCtrl'
   }).
   when('/about', {
@@ -35,11 +35,11 @@
     templateUrl: '../templates/admins/index.html'
   }).
   when('/admins/console', {
-    templateUrl: '../templates/sessions/console.html',
+    templateUrl: '../templates/admins/desserts/index.html',
     controller: 'AdminDessertIndexCtrl'
   }).
   when('/admin_console', {
-    templateUrl: '../templates/sessions/console.html',
+    templateUrl: '../templates/admins/desserts/index.html',
     controller: 'AdminDessertIndexCtrl'
   }).
   when('/admins/:admin_id/desserts/:id/edit', {
