@@ -25,6 +25,6 @@
     $location.url "/admin_console"
 
   $scope.uploadPicture = () ->
-    $location.url "/desserts/#{$scope.dessert.name}/pictures/new"
+    $location.url "/admin/#{adminId}/desserts/#{$scope.dessert.name}/pictures/new"
 
 ]

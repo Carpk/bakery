@@ -4,13 +4,15 @@
 ])
 .config(['$routeProvider', ($routeProvider) ->
   $routeProvider.
+  when('/about', {
+    templateUrl: '../templates/about.html'
+  }).
+  when('/contact', {
+    templateUrl: '../templates/contact.html'
+  }).
   when('/desserts', {
     templateUrl: '../templates/desserts/index.html',
     controller: 'DessertIndexCtrl'
-  }).
-  when('/desserts/new', {
-    templateUrl: '../templates/desserts/new.html',
-    controller: 'DessertNewCtrl'
   }).
   when('/desserts/:name', {
     templateUrl: '../templates/desserts/show.html',
@@ -18,23 +20,9 @@
   }).
   when('/admins/:admin_id/desserts/:name/pictures/new', {
     templateUrl: '../templates/admins/desserts/pictures/new.html',
-    controller: 'PictureNewCtrl'
+    controller: 'AdminDessertPictureNewCtrl'
   }).
-  when('/about', {
-    templateUrl: '../templates/about.html',
-    controller: 'HomeCtrl'
-  }).
-  when('/contact', {
-    templateUrl: '../templates/contact.html',
-    controller: 'HomeCtrl'
-  }).
-  when('/admins/sign_in', {
-    templateUrl: '../templates/sessions/new.html'
-  }).
-  when('/admins/index', {
-    templateUrl: '../templates/admins/index.html'
-  }).
-  when('/admins/console', {
+  when('/admins/:admin_id/console', {
     templateUrl: '../templates/admins/desserts/index.html',
     controller: 'AdminDessertIndexCtrl'
   }).
@@ -46,9 +34,16 @@
     templateUrl: '../templates/admins/desserts/edit.html',
     controller: 'AdminDessertEditCtrl'
   }).
+  when('/admins/:admin_id/desserts/new', {
+    templateUrl: '../templates/admins/desserts/new.html',
+    controller: 'AdminDessertNewCtrl'
+  }).
   when('/admins/:admin_id/desserts/:name', {
     templateUrl: '../templates/admins/desserts/show.html',
     controller: 'AdminDessertShowCtrl'
+  }).
+  when('/admins/sign_in', {
+    templateUrl: '../templates/sessions/new.html'
   }).
   when('/sign_up', {
     templateUrl: 'sign_up.html',
