@@ -1,8 +1,6 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <h1>Tatiana's Bakery</h1>
-    </div> 
+    <div class="navbar-header"><h1>Tatiana's Bakery</h1></div> 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
       <ul id="nav-links" class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
@@ -22,32 +20,22 @@
     </div>
   </div>
   <div class="row">
-    <ul class="col-sm-2" ng-controller="SessionCtrl">
-    </ul>
+    <ul class="col-sm-2" ng-controller="SessionCtrl"></ul>
     <div class="col-sm-10" ng-controller="DessertNewCtrl">
       <h1>Create New Item:</h1>
       <div class="cropBox">
-        <div>
-          <input type="file" id="fileInput" />
-        </div>
+        <div><input type="file" id="fileInput" /></div>
         <div class="cropArea">
           <img-crop image="myImage" result-image="myCroppedImage" area-type="square"></img-crop>
         </div>
-        <div>
-          Cropped Image:
-        </div>
-        <div>
-          <img ng-src="{{myCroppedImage}}" />
-        </div>
+        <div>Cropped Image:</div>
+        <div><img ng-src="{{myCroppedImage}}" /></div>
         <button ngf-accept="'image/*'" ng-click="uploadPic(myCroppedImage)">Save</button><br>
         <img ng-show="picFile[0] != null" ngf-src="picFile[0]" class="thumb" src="">
         <span class="progress ng-hide" ng-show="picFile[0].progress >= 0">
           <div style="width:%" ng-bind="picFile[0].progress + '%'" class="ng-binding">%</div>
         </span>
         <span ng-show="picFile[0].result" class="ng-hide">Upload Successful</span>
-        <!-- <form ng-submit="createItem()">
-          <input type="submit" value="Create">
-        </form> -->
       </div>
     </div>
   </div>

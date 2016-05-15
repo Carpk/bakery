@@ -17,6 +17,9 @@
     $http.patch("./desserts/#{$scope.dessert.id}/pictures/#{picId}.json", $scope.dessert)
     location.reload(true)
 
+  $scope.viewDessert = (id) ->
+    $location.url "/admins/#{adminId}/desserts/#{id}"
+
   $scope.updateItem = () ->
     $http.patch("./desserts/#{$scope.dessert.id}.json", $scope.dessert)
     $location.url "/admin_console"
