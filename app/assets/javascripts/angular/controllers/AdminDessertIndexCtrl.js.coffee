@@ -18,5 +18,4 @@
       $http.delete("./admins/#{adminId}/desserts/#{id}.json").success((data) ->
         location.reload(true)
       )
-
 ]

@@ -18,21 +18,13 @@
     templateUrl: '../templates/desserts/show.html',
     controller: 'DessertShowCtrl'
   }).
-  when('/admins/:admin_id/desserts/:name/pictures/new', {
-    templateUrl: '../templates/admins/desserts/pictures/new.html',
-    controller: 'AdminDessertPictureNewCtrl'
-  }).
-  when('/admins/:admin_id/console', {
-    templateUrl: '../templates/admins/desserts/index.html',
-    controller: 'AdminDessertIndexCtrl'
-  }).
   when('/admin_console', {
     templateUrl: '../templates/admins/desserts/index.html',
     controller: 'AdminDessertIndexCtrl'
   }).
-  when('/admins/:admin_id/desserts/:id/edit', {
-    templateUrl: '../templates/admins/desserts/edit.html',
-    controller: 'AdminDessertEditCtrl'
+  when('/admins/:admin_id/console', {
+    templateUrl: '../templates/admins/desserts/index.html',
+    controller: 'AdminDessertIndexCtrl'
   }).
   when('/admins/:admin_id/desserts/new', {
     templateUrl: '../templates/admins/desserts/new.html',
@@ -41,6 +33,18 @@
   when('/admins/:admin_id/desserts/:name', {
     templateUrl: '../templates/admins/desserts/show.html',
     controller: 'AdminDessertShowCtrl'
+  }).
+  when('/admins/:admin_id/desserts/:id/edit', {
+    templateUrl: '../templates/admins/desserts/edit.html',
+    controller: 'AdminDessertEditCtrl'
+  }).
+  when('/admins/:admin_id/desserts/:name/pictures/new', {
+    templateUrl: '../templates/admins/desserts/pictures/new.html',
+    controller: 'AdminDessertPictureNewCtrl'
+  }).
+  when('/admins/:admin_id/categories', {
+    templateUrl: '../templates/admins/categories/index.html',
+    controller: 'AdminDessertIndexCtrl'
   }).
   when('/admins/sign_in', {
     templateUrl: '../templates/sessions/new.html'

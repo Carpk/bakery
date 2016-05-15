@@ -15,9 +15,9 @@
 </nav>
 <div class="container">
   <div class="pull-right admin-nav" ng-controller="SessionCtrl">
-    <a href="#/admins/1/console">Manage Items</a>
-    <a href="" ng-click="viewDessert(dessert.name)">View Item</a>
-    <a href="" role="presentation" ng-click="logOut()">Logout</a>
+    <a ng-click="manageDesserts()" class="clickable">Manage Items</a>
+    <a ng-click="viewDessert(dessert.name)" class="clickable">View Item</a>
+    <a role="presentation" ng-click="logOut()" class="clickable">Logout</a>
   </div>
   <h2>Edit Item:</h2>
   <div class="row">

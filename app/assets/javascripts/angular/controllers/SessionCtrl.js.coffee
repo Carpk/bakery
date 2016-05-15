@@ -18,4 +18,14 @@
       console.info('Error in authenticating user')
       )
 
+  adminId = 1
+
+  $scope.createDessert = () ->
+    $location.url "/admins/#{adminId}/desserts/new"
+
+  $scope.editCategories = () ->
+    $location.url "/admins/#{adminId}/categories"
+
+  $scope.manageDesserts = () ->
+    $location.url "/admins/#{adminId}/console"
 ]

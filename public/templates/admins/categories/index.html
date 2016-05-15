@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1>Tatiana's Bakery</h1>
+    </div> 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+      <ul id="nav-links" class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="/#/desserts">Desserts</a></li>
+        <li><a href="/#/about">About</a></li>
+        <li><a href="/#/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 pale-background">
+    <div class="pull-right admin-nav" ng-controller="SessionCtrl">
+      <a href="#/admins/1/console">Manage Items</a>
+      <a href="#/admins/1/desserts/new">Create new Item</a>
+      <a href="" role="presentation" ng-click="logOut()">Logout</a>
+    </div>
+    <h2>Edit Categories</h2>
+  </div>
+</div>
+

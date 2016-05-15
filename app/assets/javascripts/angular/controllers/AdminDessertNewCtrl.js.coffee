@@ -1,4 +1,4 @@
-@bakery.controller 'DessertNewCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
+@bakery.controller 'AdminDessertNewCtrl', ['$scope', '$location', '$http', ($scope, $location, $http) ->
 
   adminId = 1
 
