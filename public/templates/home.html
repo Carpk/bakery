@@ -2,11 +2,12 @@
   <div class="jumbotron center-welcome-msg">
     <p><h1>Tatiana's Bakery</h1></p>
     <div>
-      <ul class="nav navbar-nav jum-nav">
-        <li><a href="/#/desserts">Desserts</a></li>
-        <li><a href="/#/about">About</a></li>
-        <li><a href="/#/contact">Contact</a></li>
+      <ul class="nav navbar-nav jum-nav" ng-controller="NavbarCtrl">
+        <li><a ng-click="viewDesserts()" class="clickable">Desserts</a></li>
+        <li><a ng-click="viewAbout()" class="clickable">About</a></li>
+        <li><a ng-click="viewContact()" class="clickable">Contact</a></li>
       </ul>
     </div>
   </div>
 </div>
+
