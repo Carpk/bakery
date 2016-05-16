@@ -2,12 +2,12 @@
 
   adminId = 1
 
-  $http.get('./desserts/new.json').success((data) ->
+  $http.get("./admins/#{adminId}/desserts/new.json").success((data) ->
     $scope.item = data
   )
 
   $scope.createItem = () ->
     $http.post('./desserts.json', $scope.item)
-    $location.url "/admin/#{adminId}/desserts/#{$scope.item.name}/pictures/new"
+    $location.url "/admins/#{adminId}/desserts/#{$scope.item.name}/pictures/new"
 
 ]

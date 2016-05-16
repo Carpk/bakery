@@ -1,5 +1,5 @@
 
-@bakery.controller 'PictureNewCtrl', ['$scope', '$http', '$routeParams', '$timeout', '$compile', 'Upload', '$location',($scope, $http, $routeParams, $timeout, $compile, Upload, $location) ->
+@bakery.controller 'AdminDessertPictureNewCtrl', ['$scope', '$http', '$routeParams', '$timeout', '$compile', 'Upload', '$location',($scope, $http, $routeParams, $timeout, $compile, Upload, $location) ->
   $scope.myImage = ''
   $scope.myCroppedImage = ''
   $scope.type = 'square'

@@ -2,11 +2,11 @@
   <div class="container-fluid">
     <div class="navbar-header"><h1>Tatiana's Bakery</h1></div> 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
-      <ul id="nav-links" class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="/#/desserts">Desserts</a></li>
-        <li><a href="/#/about">About</a></li>
-        <li><a href="/#/contact">Contact</a></li>
+      <ul id="nav-links" class="nav navbar-nav navbar-right" ng-controller="NavbarCtrl">
+        <li><a ng-click="viewHome()" class="clickable">Home</a></li>
+        <li><a ng-click="viewDesserts()" class="clickable">Desserts</a></li>
+        <li><a ng-click="viewAbout()" class="clickable">About</a></li>
+        <li><a ng-click="viewContact()" class="clickable">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -14,14 +14,14 @@
 <div class="container">
   <div class="row">
     <div class="pull-right admin-nav" ng-controller="SessionCtrl">
-      <a href="#/admins/1/console">Manage Items</a>
-      <a href="" ng-click="editDessert(dessert.id)">Edit Items</a>
-      <a href="" role="presentation" ng-click="logOut()">Logout</a>
+      <a ng-click="manageDesserts()" class="clickable">Manage Items</a>
+      <a ng-click="editCategories()" class="clickable">Edit Categories</a>
+      <a role="presentation" ng-click="logOut()" class="clickable">Logout</a>
     </div>
   </div>
   <div class="row">
     <ul class="col-sm-2" ng-controller="SessionCtrl"></ul>
-    <div class="col-sm-10" ng-controller="DessertNewCtrl">
+    <div class="col-sm-10" ng-controller="AdminDessertPictureNewCtrl">
       <h1>Create New Item:</h1>
       <div class="cropBox">
         <div><input type="file" id="fileInput" /></div>
