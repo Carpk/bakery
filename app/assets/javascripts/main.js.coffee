@@ -44,7 +44,7 @@
   }).
   when('/admins/:admin_id/categories', {
     templateUrl: '../templates/admins/categories/index.html',
-    controller: 'AdminDessertIndexCtrl'
+    controller: 'AdminCategoryIndexCtrl'
   }).
   when('/admins/sign_in', {
     templateUrl: '../templates/sessions/new.html'
