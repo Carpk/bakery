@@ -4,19 +4,6 @@
       <h1>Tatiana's Bakery</h1>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div id="dropdown-sort" class="dropdown navbar-right">
-        Sort by:
-        <select ng-model="orderProp" class="btn btn-default dropdown-toggle">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
-      </div>
-      <form id="nav-search" class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input class="form-control" placeholder="Search" ng-model="query">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
       <ul id="nav-links" class="nav navbar-nav navbar-right" ng-controller="NavbarCtrl">
         <li><a ng-click="viewHome()" class="clickable">Home</a></li>
         <li><a ng-click="viewDesserts()" class="clickable">Desserts</a></li>
@@ -28,6 +15,26 @@
 </nav>
 
 <div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <h1>Desserts</h1>
+    </div>
+    <div class="col-sm-7">
+      <form id="nav-search" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input class="form-control" placeholder="Search" ng-model="query">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <div id="dropdown-sort" class="dropdown navbar-right">
+        Sort by:
+        <select ng-model="orderProp" class="btn btn-default dropdown-toggle">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div ng-repeat="dessert in desserts | filter:query | orderBy:orderProp" class="fadein">
       <div class="clearfix" ng-if="$index % 3 == 0"></div>
