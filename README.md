@@ -18,7 +18,7 @@ Download the repo, and run the following commands from the root directory:
 
 `rake db:seed`
 
-###Screenshot
+### Screenshot
 
 ![landing page](https://raw.githubusercontent.com/Carpk/bakery/master/app/assets/images/landing_page.png)
 
